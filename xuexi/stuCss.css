@@ -1,0 +1,52 @@
+
+		body,h2,a,img,div,p{
+		padding: 0;
+		margin: 0;
+		color: white;
+	}
+	h2{
+		font-size: 26px;
+		
+		padding-bottom: 12px;
+		margin-bottom: 12px;
+	}
+	body{
+			width:1280px;
+    		height:720px;
+    		overflow-x: hidden;
+    		overflow-y: hidden;
+    		background: red;
+	}
+	#box{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width:1280px;
+    		/*height:720px;*/
+    		height: 100%;
+    		margin: 0 auto;
+    		padding-left: 100px;
+			padding-top: 40px;
+	}
+	img{
+		display: block;
+		width: 370px;
+		height: 180px;
+		margin-bottom: 20px;
+	}
+	p{
+			font-size: 22px;
+			color: white;
+			width: 500px;
+			margin-left: 40px;
+			text-indent: 2em;
+			height: 37px;
+			line-height: 37px;
+
+		}
+		.pic,.text{
+			float: left;
+		}
+		.text{
+			margin-left: 40px;
+		}
