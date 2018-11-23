@@ -1,0 +1,55 @@
+
+		body,h2,div,p{
+		padding: 0;
+		margin: 0;
+	}
+		body{
+			width: 1280px;
+			height: 72px;
+			background: url(../img/background-1.png) no-repeat;
+			color: #fff;
+			overflow-y: hidden;
+			margin: 0 auto;
+			font-family: '方正兰亭粗黑'
+		}
+		.item{
+			position: fixed;
+			background: url(../img/constryside-11.png);
+			width: 1280px;
+			height: 180px;
+			left: 0px;
+			top: 0px;
+			z-index: 2;
+		}
+		.item h2{
+			font-size: 66px;
+			margin-left: 168px;
+			margin-top: 62px;
+		}
+		.item span{
+			font-size: 20px;
+			color: red;
+			margin-left: 794px;
+			margin-bottom: 12px;
+		}
+		.title{
+			width: 1014px;
+			padding-top: 110px;
+			margin: 0 auto;
+		}
+		#title{
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+		.title h2{
+			font-size: 32px;
+			color: black;
+			margin-bottom: 20px;
+		}
+		img{
+			width: 500px;
+			height: 300px;
+			margin-bottom: 20px;
+			border-radius: 8px;
+		}

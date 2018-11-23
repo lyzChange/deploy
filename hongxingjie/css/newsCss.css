@@ -1,0 +1,96 @@
+body,h2,div,p{
+		padding: 0;
+		margin: 0;
+	}
+		body{
+			width: 1280px;
+			height: 720px;
+			background: url(../img/background-1.png) no-repeat;
+			color: #fff;
+			margin: 0 auto;
+			overflow-y: hidden;
+			font-family: "方正兰亭"
+		}
+		.item{
+			position: fixed;
+			background: url(../img/constryside-11.png);
+			width: 1280px;
+			height: 180px;
+			left: 0px;
+			top: 0px;
+			z-index: 2;
+		}
+		.item h2{
+			font-size: 66px;
+			margin-left: 168px;
+			margin-top: 62px;
+		}
+		.item span{
+			font-size: 20px;
+			color: red;
+			margin-left: 794px;
+			margin-bottom: 12px;
+		}
+		.title{
+			width: 1014px;
+			padding-top: 120px;
+			margin: 0 auto;
+		}
+		#title{
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+		.title h2{
+			font-size: 32px;
+			color: black;
+			margin-bottom: 20px;
+		}
+		.pic1 img{
+			width: 434px;
+			height: 207px;
+			display: block;
+			margin-bottom: 20px;
+			border-radius: 8px;
+		}
+		p{
+			font-size: 24px;
+			color: black;
+			text-indent: 2em;
+			margin-left: 20px;
+			height: 147px;
+			line-height: 33px;
+			width: 560px;
+			font-family: 'Microsoft YaHei'
+		}
+		
+		.text1{
+			width: 560px;
+		}
+		.pic1,.text1{
+			float: left;
+		}
+		.title1:after{
+			display: block;
+			content: "";
+			clear: both;
+			visibility: hidden;
+		}
+		.pic2 img{
+			width: 434px;
+			height: 207px;
+			border-radius: 8px;
+		}
+		.pic2,.text2{
+			float: left;
+		}
+			.title2:after{
+			display: block;
+			content: "";
+			clear: both;
+			visibility: hidden;
+		}
+		.text2 p{
+			margin-top: 20px;
+		}
+		
