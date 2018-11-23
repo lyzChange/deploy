@@ -1,0 +1,45 @@
+	body,h2,div,p{
+		padding: 0;
+		margin: 0;
+	}
+		body{
+			width: 1280px;
+			height: 720px;
+			overflow-y: hidden;
+			background: url(../img/background-1.png) no-repeat;
+			color: #fff;
+			margin: 0 auto;
+			font-family: "方正兰亭"
+		}
+		.item{
+			font-size: 67px;
+			margin-bottom: 40px;
+		}
+		#box{
+			padding: 74px;
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+		img{
+			width: 1014px;
+			height: 427px;border-radius: 8px;
+			margin-bottom: 20px;
+		}
+		p{
+			font-size: 32px;
+			color: black;
+			margin-bottom: 20px;
+		}
+		p{
+			font-size: 20px;
+			margin-right: 13px;
+			color: black;
+		}
+		span{
+			color: red;
+			font-size: 20px;
+			position: relative;
+			left: 710px;
+			top: -1042px;
+		}
