@@ -1,0 +1,78 @@
+
+	body,h2,div,img,ul,li{
+		padding: 0;
+		margin: 0;
+	}
+		body{
+			width: 1920px;
+			height: 1080px;
+			/*overflow-y: hidden;*/
+			background: url(../img/background.jpg) no-repeat;
+			color: #fff;
+			margin: 0 auto;
+			font-family: "方正兰亭"
+		}
+		#box{
+			margin-left: 200px;
+			position: relative;
+			top: 0;
+			left: 0
+		}
+		.item{
+			font-size: 72px;
+			padding-top: 55px;
+			margin-bottom: 55px;
+		}
+		ul li{
+			list-style: none;
+			float: left;
+		}
+		img{
+			width: 750px;
+			height: 360px;
+			border-radius: 8px;
+			margin: 10px;
+		}
+		li h2{
+			width: 750px;
+			font-size: 48px;
+			background-color: rgba(0,0,0,0.7);
+			border-radius: 8px;
+			text-align: center;
+			
+		} 
+		ul:after{
+			content: "";
+			display: block;
+			clear: both;
+			visibility: hidden;
+		}
+		.img1 h2{
+			position: absolute;
+			left: 10px;
+			top: 512px;
+		}
+		.img2 h2{
+			position: absolute;
+			left: 780px;
+			top: 512px;
+		}
+		.img3 h2{
+			position: absolute;
+			left: 10px;
+			top: 896px;
+		}
+		.img4 h2{
+			position: absolute;
+			left: 780px;
+			top: 896px;
+		}
+		span{
+			font-size: 30px;
+			float: right;
+			margin-right: 200px;
+			font-family: "Microsoft YaHei"
+		}
+		.now{
+		box-shadow:orange 0px 0px 20px 5px ;
+		}

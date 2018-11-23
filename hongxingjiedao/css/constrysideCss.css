@@ -1,0 +1,42 @@
+
+		body,h2,div,p{
+		padding: 0;
+		margin: 0;
+	}
+		body{
+			width: 1920px;
+			height: 1080px;
+			overflow-y: hidden;
+			background: url(../img/background-1.jpg) no-repeat;
+			color: #fff;
+			margin: 0 auto;
+			font-family: "方正兰亭"
+		}
+		.item{
+			font-size: 100px;
+			margin-bottom: 60px;
+		}
+		.title{
+			width: 1520px;
+
+		}
+		p{
+			width: 1520px;
+			font-size: 40px;
+			text-indent: 2em;
+			color:black;
+			margin-bottom: 20px;
+			font-family: 'Microsoft YaHei'
+		}
+		#box{
+			padding: 200px;
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+		span{
+			font-size: 30px;
+			float: right;
+			margin-right: 13px;
+			color: black;
+		}

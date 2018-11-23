@@ -1,0 +1,75 @@
+body,h2,div,p{
+		padding: 0;
+		margin: 0;
+	}
+		body{
+			width: 1920px;
+			height: 1080px;
+			background: url(../img/background-1.jpg) no-repeat;
+			color: #fff;
+			margin: 0 auto;
+			overflow-y: hidden;
+			font-family: "方正兰亭"
+		}
+		.item{
+			font-size: 100px;
+			margin-bottom: 60px;
+		}
+		#box{
+			padding: 200px;
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+		.title h2{
+			font-size: 48px;
+			color: black;
+			margin-bottom: 20px;
+		}
+		.pic1 img{
+			width: 650px;
+			height: 310px;
+			display: block;
+			margin-bottom: 20px;
+			border-radius: 8px;
+		}
+		p{
+			font-size: 36px;
+			color: black;
+			text-indent: 2em;
+			margin-left: 20px;
+			height: 220px;
+			line-height: 50px;
+			width: 840px;
+			font-family: 'Microsoft YaHei'
+		}
+		
+		.text1{
+			width: 870px;
+		}
+		.pic1,.text1{
+			float: left;
+		}
+		.title1:after{
+			display: block;
+			content: "";
+			clear: both;
+			visibility: hidden;
+		}
+		.pic2 img{
+			width: 650px;
+			height: 310px;
+			border-radius: 8px;
+		}
+		.pic2,.text2{
+			float: left;
+		}.text2 p{
+			margin-top: 20px;
+		}
+		span{
+			font-size: 30px;
+			float: right;
+			margin-right: 13px;
+			color: black;
+			margin-top: 40px;
+		}
