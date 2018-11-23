@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		background-color: red;
+		width: 1280px;
+		height: 720px;
+		color: #fff;
+		overflow-y: hidden;
+	}
+	#box{
+		position: relative;
+		margin-left: 100px;
+		margin-top: 40px;
+	}
+		ul li{
+			
+			list-style: none;
+			
+		}
+		#img1{
+			position: absolute;
+			left: 0;
+			top: 0;	
+
+		}
+		 h2{
+			position: absolute;
+			top: 92px;
+			left: 120px;
+		}
+		#img2{
+			position: absolute;
+			left: 400px;
+			top: 0
+		}
+		#img2 h2{
+			position: absolute;
+			top: 92px;
+			left: 120px;
+		}
+		#img3{
+			position: absolute;
+			left: 0px;
+			top:280px;
+		}
+	#img4{
+			position: absolute;
+			left: 400px;
+			top: 280px;
+		}
+		.now{
+			width:393px;
+			height:257px;
+			box-shadow:#fff 0px 0px 10px 2px ;
+		}
+		img{
+			width: 393px;
+			height: 257px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul id="ul">
+			<li class="now" id="img1">
+				<h2>乡村介绍</h2>
+				<img src="img/constryside.png" alt="">
+				
+			</li>
+			<li id="img2">
+				<h2>近期要闻</h2>
+				<img src="img/news.png" alt="">
+			</li>
+			<li id="img3">
+				<h2>党建播报</h2>
+				<img src="img/tel.png" alt="">
+			</li>
+			<li id="img4">
+				<h2>党员学习</h2>
+				<img src="img/stu.png" alt="">
+			</li>
+		</ul>
+	</div>
+	<script>
+	
+	var box=document.getElementById('box');
+	var list=document.getElementById("ul").children;
+	var now=0;
+	document.onkeydown=function(e){
+		switch(e.keyCode){
+			case 37://左
+			now--;
+			if(now<0){
+				now=0;
+			}
+			break;
+			case 39://右
+			now++;
+			if(now>list.length){
+				now=list.length-1
+			}
+			break;
+			case 38://上
+	        now-=2;
+	        if(now<0){
+	          now+=2;
+	        }
+	        break;
+	        case 40://下
+	        now+=2;
+	        if(now>ul.length){
+	          now-=2;
+	        }
+	        break;
+			}
+			for(var i=0;i<list.length;i++){
+				list[i].className="";
+				if(i==now){
+					list[i].className="now";
+
+				}
+				if(list[i].className=="now"){
+					if(list[i].id=="img1"){
+						if(e.keyCode=="13"){
+							window.open("constryside.html")
+						}
+					}if(list[i].id=="img2"){
+						if(e.keyCode=="13"){
+							window.open("news.html")
+						}
+					}
+					if(list[i].id=="img3"){
+						if(e.keyCode=="13"){
+							window.open("tel.html")
+						}
+					}
+					if(list[i].id=="img4"){
+						if(e.keyCode=="13"){
+							window.open("stu.html")
+						}
+					}
+
+			}
+
+			}
+			// 判断li是否具有now属性 然后确定其中的id值
+
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+		body,h2,a,img,div,p{
+		padding: 0;
+		margin: 0;
+		color: white;
+	}
+	h2{
+		font-size: 26px;
+		
+		padding-bottom: 12px;
+		margin-bottom: 12px;
+	}
+	body{
+			width:1280px;
+    		height:720px;
+    		overflow-x: hidden;
+    		overflow-y: hidden;
+    		background: red;
+	}
+	#box{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width:1280px;
+    		/*height:720px;*/
+    		height: 100%;
+    		margin: 0 auto;
+    		padding-left: 100px;
+			padding-top: 40px;
+	}
+	.title1,.title2{
+		width: 503px;
+		margin-right: 40px;
+	}
+	.title1 img,.title2 img{
+		width: 503px;
+		height: 330px;
+
+
+	}
+	p{
+		text-align: center;
+		font-size: 24px;
+		margin: 12px 0;
+	}
+	.title1,.title2{
+		float: left;
+	}
+	.title:after{
+		content: "";
+		display: block;
+		clear: both;
+		visibility: hidden;
+	}
+	.title3 img,.title4 img,.title5 img{
+		width: 320px;
+	}
+	.title3,.title4,.title5{
+		float: left;
+		margin-right: 40px;
+		width: 320px;
+		margin-top: 12px;
+	}
