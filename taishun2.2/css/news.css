@@ -1,0 +1,67 @@
+body,div,h2,p,img{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		width: 1280px;
+		height: 720px;
+		background: url("../img/background-1.png") no-repeat;
+		overflow-y: hidden;
+	}
+	#box{
+		width: 1030px;
+		margin: 0 auto;
+	}
+		.item{
+			position: fixed;
+			background: url(../img/background-11.png);
+			width: 1280px;
+			height: 180px;
+			left: 0px;
+			top: 0px;
+			z-index: 2;
+		}
+		.item h2{
+			font-size: 48px;
+			margin-left: 168px;
+			margin-top: 62px;
+		}
+		.item span{
+			font-size: 20px;
+			color: red;
+			margin-left: 794px;
+			margin-bottom: 12px;
+		}
+		ul li{
+			list-style: none;
+			font-size: 20px;
+			height: 30px;
+			line-height: 30px;
+			margin:12px 0;
+
+		}
+		#title{
+			position: relative;left: 0;
+			top: 0;
+		}
+		.title{
+			padding-top: 180px;
+		}
+		.title h2{
+			font-size: 26px;
+		}
+		img{
+			width: 1030px;
+			height: 100px;
+			border-radius: 8px;
+		}
+		.title3{
+			margin-top: 20px;
+		}
+		.title3 img{
+			width: 340px;
+			height: 200px;
+		}
+		.now{
+			background: #b7b1b2;
+		}

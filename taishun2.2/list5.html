@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,div,h2,p,img{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		width: 1280px;
+		height: 720px;
+		background: url("img/background-1.png") no-repeat;
+		overflow-y: hidden;
+	}
+	#box{
+		width: 1030px;
+		margin: 0 auto;
+	}
+	h2{
+		width: 1030px;
+		margin: 0 auto;
+		font-size: 26px;
+		padding-top: 100px;
+	}	
+	p{
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	img{
+		width: 500px;
+		height: 300px;
+		border-radius: 8px;
+	}
+	#box{
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+	span{
+		color: red;
+		margin-left:750px;
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<h2>2018年里光婆饼（荷花、葡萄）文化旅游节隆重开幕</h2>
+		<span>按上下键翻页 按返回键返回</span>
+		<p>来源：泰顺新闻网讯</p>
+		<p>发布时间：2018-07-30 10:38:00 作者：施双双</p>
+		<p>　为深入贯彻党的十八大精神，纪念改革开放40周年暨八八战略十五周年，深化以美丽乡村建设为主题的农村精神文明创建，7月28日，以“乡村振兴醉美里光”为主题的2018里光婆饼(荷花、葡萄)文化旅游节在司前畲族镇里光村盛大开幕，吸引上千名村民、游客前来采葡萄、赏荷花、品美食。
+</p>
+<p>7月的里光，葡萄飘香，荷花盛开。走过多彩风车围绕的风车长廊，只见满塘的荷花竞相开放，微风把荷叶掀起一片片碧浪，荷花翩翩起舞，真是美不胜收。前来赏荷的游客、摄影爱好者们络绎不绝，或拍照，或写生，为这个小山村带来了前所未有的热闹。
+</p>
+<p>“秀樾横塘十里香，水花晚色静年芳”，荷花池畔上80多名旗袍爱好者在荷花池畔演绎着旗袍魅力，人与花构成一幅优美的画卷。在里光村古民居内，村民们正在进行一场精彩纷呈的婆饼制作比赛，由村里统一提供食材，薄饼制作参与者一同竞赛。现场婆饼香味十足，让人忍不住的咽口水。与此同时，在里光村文化礼堂内，以畲族优秀传统文化为亮点的文艺表演正在精彩上演。越戏表演、木偶戏、情景剧《移风易俗》、群舞、独唱等内容形式多样的节目让游客们大饱眼福，游戏互动吃葡萄比赛更是将现场气氛推向高潮。当天，还有荷花垂钓、摄影展、民俗特色展示、休闲农家乐等丰富多彩的活动在酷暑中带给村民、游客一份独特的游赏体验。
+</p>
+<p>近年来，里光着眼于乡村振兴，大力推进现代农业与旅游业融合发展，抢抓机遇，借势而为，在原来农业建设基础上，重点打造葡萄采摘、荷塘景观、观光旅游为一体的合作战略关系，带动整个村的经济发展。游客胡先生表示，这样有意义的活动应该每年都举办，将里光的文化内涵与风土人情传达得更远。</p>
+	</div>
+	<script>
+	var box=document.getElementById('box');
+		document.onkeydown=function(e){
+			if(e.keyCode==27){
+				window.close();
+			}
+			var t = parseFloat(box.style.top) || box.offsetTop;
+			if(t<0){
+				if(e.keyCode==38){//上
+				box.style.top= t + 40+"px";
+				// alert(t)
+				
+			}
+			}
+			if(t>-300){
+				if(e.keyCode==40){//下
+				box.style.top= t - 40 +"px";
+				
+			}
+			}
+		}
+	</script>
+</body>
+</html>
