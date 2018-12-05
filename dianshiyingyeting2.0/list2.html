@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body,div,img{
+		padding: 0;
+		margin: 0;
+	}
+		body{
+			width: 1280px;
+			height: 720px;
+			overflow: hidden;
+		}
+		img{
+			width: 1280px;
+			height: 720px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<img src="img/3-3.png" alt="">
+	</div>
+	<script>
+		document.onkeydown=function(e){
+			if(e.keyCode==27){
+				window.close()
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			width: 1280px;
+			height: 720px;
+			background: url(img/background.png) no-repeat;
+			/*overflow-y: hidden;*/
+		}
+		ul li{
+			list-style: none;
+			float: left;
+			margin: 20px;
+		}
+		.now{
+			-moz-transform: scale(1.08);
+			-webkit-transform: scale(1.08);
+			-ms-transform: scale(1.08);
+			box-shadow:white 0px 0px 20px 5px ;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul id="ul1">
+			<li>
+				<img src="img/1.png" alt="" class="now"  id="li0">
+			</li>
+			<li>
+				<img src="img/2.png" alt=""  id="li1">
+			</li>
+			<li>
+				<img src="img/3.png" alt=""  id="li2">
+			</li>
+			<li>
+				<img src="img/4.png" alt=""  id="li3">
+			</li>
+		</ul>
+	</div>
+	<script>
+	var box=document.getElementById('box');
+	var now=0;
+	var list=document.getElementsByTagName("IMG");
+	var now=0;
+	document.onkeydown=function(e){
+		switch(e.keyCode){
+			case 37://左
+			now--;
+			if(now<=0){
+				now=0;
+			}
+			break;
+			case 39://右
+			now++;
+			if(now>=list.length-1){
+				now=list.length-1
+			}
+			break;
+			case 38://上
+	        // now-=2;
+	        now=now-2;
+	        if(now<=0){
+	          now=0
+	        }
+	        break;
+	        case 40://下
+	        now+=2;
+	        if(now>=list.length-1){
+	         now=list.length-1;
+	        }
+	        break;
+			}
+			for(var i=0;i<list.length;i++){
+				list[i].className="";
+				if(i==now){
+					list[i].className+="now";
+
+				}
+				if(list[i].className=="now"){
+					if(list[i].id=="li0"){
+						if(e.keyCode=="13"){
+							window.open("list0.html")
+						}
+					}if(list[i].id=="li1"){
+						if(e.keyCode=="13"){
+							window.open("list1.html")
+						}
+					}
+					if(list[i].id=="li2"){
+						if(e.keyCode=="13"){
+							window.open("list2.html")
+						}
+					}
+					if(list[i].id=="li3"){
+						if(e.keyCode=="13"){
+							window.open("list3.html")
+						}
+					}
+
+			}
+
+			}
+			if(e.keyCode=="27"){
+				window.close();
+			}
+
+		}
+	</script>
+</body>
+</html>
