@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,div,h2,p,img{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		width: 1280px;
+		height: 720px;
+		background: url("img/background-11.png") no-repeat;
+		overflow-y: hidden;
+	}
+	#box{
+		width: 1030px;
+		margin: 0 auto;
+	}
+	h2{
+		width: 1030px;
+		margin: 0 auto;
+		font-size: 26px;
+		padding-top: 100px;
+	}	
+	p{
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	img{
+		width: 500px;
+		height: 300px;
+		border-radius: 8px;
+	}
+	#box{
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+	span{
+		color: red;
+		margin-left:900px;
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<h2>承天畲族村：争创3A景区村庄 助推全域旅游发展</h2>
+		<span>按返回键返回</span>
+		<p>来源：泰顺新闻网讯</p>
+		<p>发布时间：2018-06-15 14:46:38 作者：施双双</p>
+		<p>为加快推进3A级景区村庄创建工作，6月13、14日，雅阳镇承天畲族村村两委组织村民拍摄创3A级景区村庄宣传片，力争今年通过第一批次3A级景区村庄市级验收，为雅阳旅游发展再添一张“金名片”。
+</p>
+<p>承天畲族村位于雅阳镇南面，处于氡泉省级自然保护区的核心区域，村内有玉龙山氡泉度假村、温州氡泉承天大酒店、宝林游客接待中心等旅游资源，是雅阳镇唯一的少数民族村，其中少数民族人口占全村人口的50.5%。承天村立足氡泉资源区位和民族特色优势，借助市、县对少数民族村的扶持机遇，加强村庄规划和基础设施建设，大力开展环境整治工作，不断改善村容村貌，着力打造民族特色村寨，努力为游客提供一个舒适整洁的旅游环境。
+</p>
+<p>承天畲族村的变化是雅阳旅游发展的一个缩影。近年来，该镇党委、政府认真贯彻落实县委县政府“全域旅游”发展战略，积极推进招商引资和项目建设，旅游发展成效显著，年初签约的泰顺史上最大单体旅游投资项目——华东大峡谷国际旅游度假区项目和近期签约的温州氡泉承天大酒店招商项目落户雅阳，塔头底温泉古村一期项目已正式开业……接下来，雅阳镇党委、政府还将一如既往地狠抓招商引资和项目推进，持续优化营商环境，推进廊桥—氡泉国家级旅游度假区和“氡泉小镇”建设，争当全域旅游发展“排头兵”，助推乡村振兴战略。
+</p>
+	</div>
+	<script>
+	var box=document.getElementById('box');
+		document.onkeydown=function(e){
+			if(e.keyCode==27){
+				window.close();
+			}
+			// var t = parseFloat(box.style.top) || box.offsetTop;
+			// if(t<0){
+			// 	if(e.keyCode==38){//上
+			// 	box.style.top= t + 40+"px";
+			// 	// alert(t)
+				
+			// }
+			// }
+			// if(t>-300){
+			// 	if(e.keyCode==40){//下
+			// 	box.style.top= t - 40 +"px";
+				
+			// }
+			// }
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,div,h2,p,img{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		width: 1280px;
+		height: 720px;
+		background: url("img/background-11.png") no-repeat;
+		overflow-y: hidden;
+	}
+	#box{
+		width: 1030px;
+		margin: 0 auto;
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+	h2{
+		width: 1030px;
+		margin: 0 auto;
+		font-size: 26px;
+		padding-top: 100px;
+			padding-bottom: 10px;
+	}	
+	p{
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	span{
+		color: red;
+
+		margin-left:780px;
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<h2>全县女干部、人才共话新时代新担当新作为座谈会召开</h2>
+		<span>按上下键翻页 按返回键返回</span>
+		<p>发布时间：2018-09-11</p>
+		<p>为提高我县女干部人才队伍素质，优化干部队伍结构，提振女干部精神、鼓舞干劲，进一步激励广大女性在新时代有新担当新作为，9月6日，我县召开女干部、人才共话新时代新担当新作为座谈会。县委常委、组织部长林丹艳，科级女干部、人才代表，县委组织部、县教育局、县人社局、县卫计局负责人，县妇联领导班子成员等参加会议。
+</p>
+		<p>座谈会上，县妇联通报了当前妇女工作情况。随后，来自不同岗位、层级、年龄段的女干部、人才代表们通过自我介绍、自身工作经历和体会、女干部人才如何在新时代有新担当新作为等方面依次进行发言，谈体会、话感受、提建议，展示了我县女干部人才朝气蓬勃、奋发进取的精神风貌。</p>
+		<p>据了解，全县共有妇女17万，县妇联下辖19个乡镇妇联组织、312个村(居)妇联、64个机关企事业单位妇委会(妇女小组)及103个两新组织妇女组织。近年来，县妇联牢牢把握“党政所急、妇女所需、妇联所能”工作定位，围绕中心服务大局，紧扣群团改革新要求，创新载体，整合资源，全力推动妇女事业发展。
+</p>
+<p>
+　　听取发言后，林丹艳强调，女干部、人才要观大势、明大局、谋事业，必须把握时代机遇，主动发挥优势，在推动泰顺绿色高质量发展中展现巾帼风采；要把握好学习和工作、优势和劣势、事业和家庭的关系，善于发现和发挥自身优势，提升自身能力素养，勇立时代潮头，在担当作为中实现自身历练成长；相关单位和部门要更加重视女干部培养选拔使用，全面优化女性人才成长环境，切实强化女性人才工作合力，进一步优化女干部、人才有为有位的成长环境；组织、人社、教育、卫生等相关部门要切实履行好相应的工作职能，在服务中心、女干部、基层中展现更大作为，团结带领女干部、人才助力泰顺高质量绿色发展。
+
+</p>
+<p>会前，与会人员欣赏了精彩的才艺展示，领略了新时代女性独特魅力。
+</p>
+	</div>
+	<script>
+	var box=document.getElementById('box');
+		document.onkeydown=function(e){
+			if(e.keyCode==27){
+				window.close();
+			}
+			var t = parseFloat(box.style.top) || box.offsetTop;
+			if(t<0){
+				if(e.keyCode==38){//上
+				box.style.top= t + 40+"px";
+				// alert(t)
+				
+			}
+			}
+			if(t>-300){
+				if(e.keyCode==40){//下
+				box.style.top= t - 40 +"px";
+				
+			}
+			}
+		}
+	</script>
+</body>
+</html>

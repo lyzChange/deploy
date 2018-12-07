@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,div,h2,p,img{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		width: 1280px;
+		height: 720px;
+		background: url("img/background-11.png") no-repeat;
+		overflow-y: hidden;
+	}
+	#box{
+		width: 1030px;
+		margin: 0 auto;
+	}
+		.item{
+			position: fixed;
+			background: url(img/background-111.png);
+			width: 1280px;
+			height: 180px;
+			left: 0px;
+			top: 0px;
+			z-index: 2;
+		}
+		.item h2{
+			font-size: 48px;
+			margin-left: 168px;
+			margin-top: 62px;
+		}
+		.item span{
+			font-size: 20px;
+			color: red;
+			margin-left: 794px;
+			margin-bottom: 12px;
+		}
+		.title{
+			padding-top: 200px;
+		}
+		ul li{
+			list-style: none;
+			font-size: 22px;
+			height: 50px;
+			line-height: 50px;
+		}
+		.now{
+
+			background: #b7b1b2;
+		
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="item">
+			<h2>系列文章</h2>
+			<span>按返回键返回</span>
+		</div>
+		<div class="title">
+			<ul>
+				<li class="now">1.“两学一做”系列辅导：如何开展专题学习讨论</li>
+				<li>2.“两学一做”系列辅导：什么是党员标准</li>
+				<li>3.“两学一做”系列辅导：如何打牢学习这一基础</li>
+				<li>4.“两学一做”系列辅导：抓好领导带头这个关键</li>
+				<li>5.“两学一做”系列辅导：如何提高党性修养</li>
+				<li>6.“两学一做”系列辅导：党委会的工作方法</li>
+				<li>7.“两学一做”系列辅导：突出问题导向</li>
+				<li>8.“两学一做”系列辅导：增强“四个意识”</li>
+				<li>9.“两学一做”系列辅导：如何学好党章</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+	var list=document.getElementsByTagName('LI');
+	var now=0;
+	document.onkeydown=function(e){
+		if(e.keyCode==27){
+			window.close();		}
+		switch(e.keyCode){
+			case 38:
+			now--;
+			if(now<=0){
+				now=0
+			}
+			break;
+			case 40:
+			now++;
+			if(now>=list.length){
+				now=list.length-1;
+			}
+		}
+		for(var i=0;i<list.length;i++){
+			list[i].className="";
+			if(i==now){
+				list[i].className="now";
+				if(i==0){
+					if(e.keyCode==13){
+						window.open("stu-atr-17.html")
+					}
+				}
+				if(i==1){
+					if(e.keyCode==13){
+						window.open("stu-atr-14.html")
+					}
+				}
+				if(i==2){
+					if(e.keyCode==13){
+						window.open("stu-atr-11.html")
+					}
+				}
+				if(i==3){
+					if(e.keyCode==13){
+						window.open("stu-art-15.html")
+					}
+				}
+				if(i==4){
+					if(e.keyCode==13){
+						window.open("stu-art-12.html")
+					}
+				}
+				if(i==5){
+					if(e.keyCode==13){
+						window.open("stu-art-19.html")
+					}
+				}
+				if(i==6){
+					if(e.keyCode==13){
+						window.open("stu-art-18.html")
+					}
+				}
+				if(i==7){
+					if(e.keyCode==13){
+						window.open("stu-art-16.html")
+					}
+				}
+				if(i==8){
+					if(e.keyCode==13){
+						window.open("stu-atr-13.html")
+					}
+				}
+				
+				
+			}
+		}
+	}
+	</script>
+</body>
+</html>

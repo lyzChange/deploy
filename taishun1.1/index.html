@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			width: 1280px;
+			height: 720px;
+			background: url(img/background.png) no-repeat;
+		}
+		#box{
+			width: 1200px;
+			margin: 0 auto;
+		}
+		ul li{
+			list-style: none;
+			float: left;
+			color: #fff;
+			width: 180px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 22px;
+			background: url(img/background-1.png);
+			text-align: center;
+			position: relative;
+			left: 20px;
+			top: 92px;
+			 font-family:"微软雅黑",Georgia,Serif;
+
+		}
+		.now{
+			background: gray;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li>首页</li>
+			<li class="now">印象泰顺</li>
+			<li>泰顺信息</li>
+			<li>党建播报</li>
+			<li>三务公开</li>
+			<li>党员学习</li>
+		</ul>
+	</div>
+	<script>
+	var list=document.getElementsByTagName('LI');
+	var now=1;
+	document.onkeydown=function(e){
+		if(e.keyCode==27){
+			window.close();
+		}
+		switch(e.keyCode){
+			case 37:
+			now--;
+			if(now<=1){
+				now=1;
+			}
+			break;
+			case 39:
+			now++;
+			if(now>=list.length-1){
+				now=list.length-1;
+			}
+			break;
+		}
+		for(var i=0;i<list.length;i++){
+			list[i].className="";
+			if(i==now){
+				list[i].className="now";
+				
+				if(i==1){
+					if(e.keyCode==13){
+						window.open("imp.html")
+					}
+				}
+				if(i==2){
+					if(e.keyCode==13){
+						window.open("news.html")
+					}
+				}
+				if(i==3){
+					if(e.keyCode==13){
+						window.open("tel.html")
+					}
+				}
+				if(i==4){
+					if(e.keyCode==13){
+						window.open("open.html")
+					}
+				}
+				if(i==5){
+					if(e.keyCode==13){
+						window.open("stu.html")
+					}
+				}
+			}
+		}
+	}
+	</script>
+</body>
+</html>

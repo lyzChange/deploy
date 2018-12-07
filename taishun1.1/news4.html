@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,div,h2,p,img{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		width: 1280px;
+		height: 720px;
+		background: url("img/background-11.png") no-repeat;
+		overflow-y: hidden;
+	}
+	#box{
+		width: 1030px;
+		margin: 0 auto;
+	}
+	h2{
+		width: 1030px;
+		margin: 0 auto;
+		font-size: 26px;
+		padding-top: 100px;
+	}	
+	p{
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	img{
+		width: 500px;
+		height: 300px;
+		border-radius: 8px;
+	}
+	#box{
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+	span{
+		color: red;
+		margin-left:750px;
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<h2>大安乡农旅融合打造“美丽田园”</h2>
+		<span>按上下键翻页 按返回键返回</span>
+		<p>来源：泰顺新闻网讯</p>
+		<p>发布时间：2018-07-30 16:23:00 作者：施双双</p>
+		<img src="img/list4-1.png" alt="">
+		<img src="img/list4-2.png" alt="">
+
+		<p>　近段时间，大安乡柳埠村的连片农田、大丘坪村的彩色水稻吸引了大批摄影爱好者前来拍摄，其中土陶文化村美丽田园还登上了温州日报头版和《温州文创》杂志，农旅结合初步展现出了生命力和带动力。
+</p>
+<p>大安乡地势平坦，素有“小平原”之称。今年以来，乡党委、政府统一思想，将特色农业、非遗文化作为景观资源，制定了美丽田园建设计划，从基础设施建设到旅游宣传推广进行全方位扶持。在科技特派员的精心指导下，干部群众齐上阵，全力打造“农旅融合，乡村振兴”美丽田园项目,同时借助旅游的传播力提高农业品牌影响力，勾勒出大安旅游的美丽田园画卷。
+</p>
+<p>大安乡地势平坦，素有“小平原”之称。今年以来，乡党委、政府统一思想，将特色农业、非遗文化作为景观资源，制定了美丽田园建设计划，从基础设施建设到旅游宣传推广进行全方位扶持。在科技特派员的精心指导下，干部群众齐上阵，全力打造“农旅融合，乡村振兴”美丽田园项目,同时借助旅游的传播力提高农业品牌影响力，勾勒出大安旅游的美丽田园画卷。下一步，大安乡将继续通过农旅融合的方式，打造一批美丽、清洁、独特的乡村田园，助推大美大安建设。
+</p>
+	</div>
+	<script>
+	var box=document.getElementById('box');
+		document.onkeydown=function(e){
+			if(e.keyCode==27){
+				window.close();
+			}
+			var t = parseFloat(box.style.top) || box.offsetTop;
+			if(t<0){
+				if(e.keyCode==38){//上
+				box.style.top= t + 40+"px";
+				// alert(t)
+				
+			}
+			}
+			if(t>-300){
+				if(e.keyCode==40){//下
+				box.style.top= t - 40 +"px";
+				
+			}
+			}
+		}
+	</script>
+</body>
+</html>

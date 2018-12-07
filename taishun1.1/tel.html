@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,div,h2,p,img{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		width: 1280px;
+		height: 720px;
+		background: url("img/background-11.png") no-repeat;
+		overflow-y: hidden;
+	}
+	#box{
+		width: 1030px;
+		margin: 0 auto;
+	}
+		.item{
+			position: fixed;
+			background: url(img/background-111.png);
+			width: 1280px;
+			height: 180px;
+			left: 0px;
+			top: 0px;
+			z-index: 2;
+		}
+		.item h2{
+			font-size: 48px;
+			margin-left: 168px;
+			margin-top: 62px;
+		}
+		.item span{
+			font-size: 20px;
+			color: red;
+			margin-left: 794px;
+			margin-bottom: 12px;
+		}
+		ul li{
+			list-style: none;
+			font-size: 20px;
+			height: 30px;
+			line-height: 30px;
+			margin:12px 0;
+
+		}
+		#title{
+			position: relative;left: 0;
+			top: 0;
+		}
+		.title{
+			padding-top: 180px;
+		}
+		.now{
+			background: #b7b1b2;
+		}
+		img{
+			border-radius: 8px;
+		}
+		.title1 img{
+			width: 400px;
+			height: 200px;
+			margin-left: 30px;
+		}
+		.title1 ul,.title1 img{
+			float: left;
+		}
+		.title2 img{
+			width: 1030px;
+			height: 100px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="item">
+			<h2>党建播报</h2>
+			<span>按上下键翻页 按返回键返回</span>
+		</div>
+		<div class="title" id="title">
+			<div class="title1">
+				<ul id="ul1">
+					<li class="now">1、泰顺县给87位党建末位生“集中补课”</li>
+					<li>2、全县女干部、人才共话新时代新担当新作为座谈会召开</li>
+					<li>3、我县召开城镇党建暨基层党建亮点品牌工作现场推进会</li>
+				</ul>
+				<img src="img/tel-1.png" alt="">
+			</div>
+			<div class="title2">
+				<img src="img/tel-2.png" alt="">
+			</div>
+		</div>
+	</div>
+	<script>
+		var list=document.getElementsByTagName('LI');
+	var title=document.getElementById('title');
+	var now=0;
+	var num=0;
+	document.onkeydown=function(e){
+		if(e.keyCode=="27"){
+			window.close();
+		}
+		
+		switch(e.keyCode){
+			case 38://上
+			now--;
+			if(now<=0){
+				now=0;
+			}
+			break;
+			case 40://下
+			now++;
+			if(now==list.length){
+				now=list.length-1;
+			}
+			break;
+		}
+		for(var i=0;i<list.length;i++){
+				list[i].className="";
+				if(i==now){
+					list[i].className="now";
+					if(i==0){
+						if(e.keyCode=="13"){
+							window.open("tel0.html")
+						}
+						
+					}
+					if(i==1){
+						if(e.keyCode=="13"){
+							window.open("tel1.html")
+						}
+					}
+					if(i==2){
+						if(e.keyCode=="13"){
+							window.open("tel2.html")
+						}
+					}
+				}
+			}
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,div,h2,p,img{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		width: 1280px;
+		height: 720px;
+		background: url("img/background-11.png") no-repeat;
+		overflow-y: hidden;
+	}
+	#box{
+		width: 1030px;
+		margin: 0 auto;
+	}
+	h2{
+		width: 1030px;
+		margin: 0 auto;
+		font-size: 26px;
+		padding-top: 100px;
+	}	
+	p{
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	img{
+		width: 500px;
+		height: 300px;
+		border-radius: 8px;
+	}
+	#box{
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+	span{
+		color: red;
+		margin-left:750px;
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="box">
+		<h2>中国共产党各时期的入党誓词</h2>
+		<span>按上下键翻页 按返回键返回</span>
+		<p>《中国共产党章程》第一章第六条规定：“预备党员必须面向党旗进行入党宣誓。誓词如下：我志愿加入中国共产党，拥护党的纲领，遵守党的章程，履行党员义务，执行党的决定，严守党的纪律，保守党的秘密，对党忠诚，积极工作，为共产主义奋斗终身，随时准备为党和人民牺牲一切，永不叛党。 ”</p>
+		<p>　中国共产党成立后，在党的一大和二大上，分别通过了《中国共产党纲领》和《中国共产党章程》。《纲领》和《章程》都对党员的言行提出了较为明确的要求，并在以后召开的党的代表大会上，对党章不断进行了修改，从而对党员的要求作了进一步的完善。</p>
+		<p>红军时代，入党誓词已经比较规范，抗日战争时期、解放战争时期、建国初期入党誓词几经修改。</p>
+		<p>　１９８２年９月召开的党的十二大首次把入党誓词作为一条写进了党章。把入党誓词写进党章，这是中国共产党历史上的第一次。党的十三大、十四大、十五大、十六大通过的党章都重申了这一条。</p>
+		<p>中国共产党的入党誓词共分为５个时期――</p>
+		<p>　红军时期：严守秘密，服从纪律，牺牲个人，阶级斗争，努力革命，永不叛党。</p>
+		<p>抗日战争时期：我志愿加入中国共产党，坚持执行党的纪律，不怕困难，不怕牺牲，为共产主义事业奋斗到底。</p>
+		<p>解放战争时期：我志愿加入中国共产党，作如下宣誓：一、终身为共产主义事业奋斗。二、党的利益高于一切。三、遵守党的纪律。四、不怕困难，永远为党工作。五、要做群众的模范。六、要保守党的秘密。七、对党有信心。八、百折不挠永不叛党。</p>
+		<p>新中国成立初期：我志愿加入中国共产党，承认党纲党章，执行党的决议，遵守党的纪律，保守党的秘密，随时准备牺牲个人的一切，为全人类彻底解放奋斗终身。</p>
+		<p>　十二大以后：我志愿加入中国共产党，拥护党的纲领，遵守党的章程，履行党员义务，执行党的决定，严守党的纪律，保守党的秘密，对党忠诚，积极工作，为共产主义奋斗终身，随时准备为党和人民牺牲一切，永不叛党。</p>
+	</div>
+	</div>
+	<script>
+	var box=document.getElementById('box');
+		document.onkeydown=function(e){
+			if(e.keyCode==27){
+				window.close();
+			}
+			var t = parseFloat(box.style.top) || box.offsetTop;
+			if(t<0){
+				if(e.keyCode==38){//上
+				box.style.top= t + 40+"px";
+				
+			}
+			}
+			if(t>-500){
+				if(e.keyCode==40){//下
+				box.style.top= t - 40 +"px";
+				
+			}
+			}
+		}
+	</script>
+</body>
+</html>

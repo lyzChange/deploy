@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,div,h2,p,img{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		width: 1280px;
+		height: 720px;
+		background: url("img/background-11.png") no-repeat;
+		overflow-y: hidden;
+	}
+	#box{
+		width: 1030px;
+		margin: 0 auto;
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+	h2{
+		width: 1030px;
+		margin: 0 auto;
+		font-size: 26px;
+		padding-top: 100px;
+			padding-bottom: 10px;
+	}	
+	p{
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	span{
+		color: red;
+
+		margin-left:780px;
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<h2>【特别关注】“党建路上一个都不能落下” ——泰顺县给87位党建末位生“集中补课</h2>
+		<span>按上下键翻页 按返回键返回</span>
+		<p>发布时间：2018年9月26日</p>
+		<p>“2018年第三季度我乡基层党建工作考核在19个乡镇中排名末位，我有着不可推卸的责任……”一位乡党委书记在谈心会上说道。9月26日上午，一场特殊的谈心会在泰顺县党员干部中展开。
+</p>
+		<p>针对末位基层党组织存在的突出问题整改没思路、规章制度执行不到位等问题，泰顺县精心设计部长谈心会等课程给从事基层党建工作的相关责任人“补课辅导”。本次补课主要针对该县第三季度基层党建工作排名末位的乡镇部门以及各乡镇党建工作排名末位的村级组织，由县委常委、组织部长集中与抓基层党建工作的“八类人员”进行交心谈心“专题辅导”。“八类人员”覆盖乡镇的党委书记、组织委员、联村领导、驻村干部、村党组织书记以及机关部门的分管党建领导、党务工作者、机关党组织书记等87名责任人，既实现了全面覆盖又保障了面面俱到</p>
+		<p>会议邀请竹里畲族乡、仕阳镇、县审管办的单位代表现场分享基层党建工作经验，结合数据和事例，为大家介绍好经验。除了经验交流，更有末位单位的表态发言，尽管是末位单位，但各单位代表们针对问题不遮不掩，深刻剖析检讨，提出针对性强、操作性高的整改措施，也为现场的党员干部的实际工作提供了借鉴。
+</p>
+<p>最后，县委常委、组织部长林丹艳就如何落实党建工作责任、如何把握当前基层党建工作的总体要求、如何抓好下步基层党建工作等三个方面进行了“专题授课”，要求各党建责任人既要抓坐值班制度、五议两公开、主题党日等“基本”，更要抓党组织建设、党员队伍管理等“根本”，激励各党建责任人要以“更高的站位、更优的标准、更严的要求”去抓好基层党建工作。“这次谈心会既是一堂生动深刻的政治辅导课，也是一堂专业性很强的业务培训课。”受约谈的党员干部纷纷表示，要牢固树立“把党建作为中心来抓”的理念，强化责任意识，切实履行职责，认真抓好整改落实。
+</p>
+	</div>
+	<script>
+	var box=document.getElementById('box');
+		document.onkeydown=function(e){
+			if(e.keyCode==27){
+				window.close();
+			}
+			var t = parseFloat(box.style.top) || box.offsetTop;
+			if(t<0){
+				if(e.keyCode==38){//上
+				box.style.top= t + 40+"px";
+				// alert(t)
+				
+			}
+			}
+			if(t>-300){
+				if(e.keyCode==40){//下
+				box.style.top= t - 40 +"px";
+				
+			}
+			}
+		}
+	</script>
+</body>
+</html>

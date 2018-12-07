@@ -1,0 +1,79 @@
+body,div,h2,p{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		width: 1280px;
+		height: 720px;
+		background: url("../img/background-11.png") no-repeat;
+		overflow-y: hidden;
+	}
+	#box{
+		width: 1030px;
+		margin: 0 auto;
+	}
+		.item{
+			position: fixed;
+			background: url(../img/background-111.png);
+			width: 1280px;
+			height: 180px;
+			left: 0px;
+			top: 0px;
+			z-index: 2;
+		}
+		.item h2{
+			font-size: 48px;
+			margin-left: 168px;
+			margin-top: 62px;
+		}
+		.item span{
+			font-size: 20px;
+			color: red;
+			margin-left: 794px;
+			margin-bottom: 12px;
+		}
+		.title{
+			padding-top: 160px;
+		}
+		#title{
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+		.title1{
+			width: 440px;
+		}
+		.title2{
+			width: 560px;
+			margin-left: 20px;
+		}
+		.title h2{
+			font-size: 26px;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		p{
+			font-size: 20px;
+			text-indent: 2em;
+		}
+		.title1,.title2{
+			float: left;
+		}
+		.title:after{
+			content: "";
+			display: block;
+			clear: both;
+			visibility: hidden;
+		}
+		img{
+			width: 440px;
+			height: 320px;
+			border-radius: 8px;
+		}
+		.title3 p{
+			width: 560px;
+			margin-left: 20px;
+		}
+		.title3 img,.title3 p{
+			float: left;
+		}

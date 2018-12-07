@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body,div,h2,p,img{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		width: 1280px;
+		height: 720px;
+		background: url("img/background-11.png") no-repeat;
+		overflow-y: hidden;
+	}
+	#box{
+		width: 1030px;
+		margin: 0 auto;
+	}
+		.item{
+			position: fixed;
+			background: url(img/background-111.png);
+			width: 1280px;
+			height: 180px;
+			left: 0px;
+			top: 0px;
+			z-index: 2;
+		}
+		.item h2{
+			font-size: 48px;
+			margin-left: 168px;
+			margin-top: 62px;
+		}
+		.item span{
+			font-size: 20px;
+			color: red;
+			margin-left: 794px;
+			margin-bottom: 12px;
+		}
+		.title{
+			padding-top: 200px;
+		}
+		ul li{
+			list-style: none;
+			font-size: 22px;
+			height: 50px;
+			line-height: 50px;
+		}
+		.now{
+
+			background: #b7b1b2;
+		
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="item">
+			<h2>基础知识</h2>
+			<span>按返回键返回</span>
+		</div>
+		<div class="title">
+			<ul>
+				<li class="now">1.《中国共产党章程》</li>
+				<li>2.《中国共产党党徽制作和使用的若干规定》</li>
+				<li>3.《中国共产党各时期的入党誓词》</li>
+				<li>4.《中国共产党宣言》</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+	var list=document.getElementsByTagName('LI');
+	var now=0;
+	document.onkeydown=function(e){
+		if(e.keyCode==27){
+			window.close();
+		}
+		switch(e.keyCode){
+			case 38:
+			now--;
+			if(now<=0){
+				now=0
+			}
+			break;
+			case 40:
+			now++;
+			if(now>=list.length){
+				now=list.length-1;
+			}
+		}
+		for(var i=0;i<list.length;i++){
+			list[i].className="";
+			if(i==now){
+				list[i].className="now";
+				if(i==0){
+					if(e.keyCode=="13"){
+						window.open("stu-konw-11.html")
+					}
+				}
+				if(i==1){
+					if(e.keyCode=="13"){
+						window.open("stu-konw-12.html")
+					}
+				}
+				if(i==2){
+					if(e.keyCode=="13"){
+						window.open("stu-know-13.html")
+					}
+				}
+				if(i==3){
+					if(e.keyCode=="13"){
+						window.open("stu-know-14.html")
+					}
+				}
+			}
+		}
+	}
+	</script>
+</body>
+</html>
