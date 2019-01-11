@@ -40,14 +40,14 @@
 		#box{
 			width: 1150px;
 		}
-		ul{
+		.ul11{
 			background: #218de1;
 			width: 300px;
 			height: 440px;
 			margin-top: 20px;
 			padding-top:20px;
 		}
-		ul li{
+		.ul11 > li{
 			height: 80px;
 			line-height: 80px;
 			width: 200px;
@@ -109,7 +109,7 @@
 		.title3{
 			display: none;
 		}
-		.now{
+		body .now{
 			background: white;
 			color: #278bbc;
 			border-radius: 8px;
@@ -136,8 +136,78 @@
 			margin-right: 10px;
 			height: 260px;
 		}
-		#ul1 li{
+		#ul1 >li{
 			font-size:30px;
+		}
+		.box-top{
+			width:980px;
+			height:66px;
+			background: blue;
+			position: absolute;
+			top:-55px;
+			left:-143px;
+			line-height:66px;
+		}
+		.box1 .lists{
+			margin-left:140px;
+			margin-right:155px;
+		}
+		.box1>li{
+			display:inline-block;
+			color:#fff;
+			font-size:20px;
+			margin-left:20px;
+		}
+		.pics{
+			width:980px;
+			height:654px;
+			overflow: hidden;
+			/* overflow-y: auto; */
+		}
+		table{
+			width:100%;
+            border-collapse: collapse;
+        }
+        td{
+            padding: 10px;
+			width:15px;
+        }
+		tr{
+			border-bottom: dashed 1px #666;	
+		}
+		.lost{
+			border-bottom:none;
+		}
+		.pic >img{
+			width:100px;
+			height:120px;
+			display:inline-block;
+			margin-right:20px;
+		}
+		.nav-box{
+			width:180px;
+			/* display:inline-block; */
+			line-height:1.2;
+			float: right;
+			margin-left:-140px;
+		}
+		.nav-box>p{
+			color:#555;
+		}
+		.nav-box>.sizes{
+			color:#000;
+		}
+		.now3{
+			background: transparent;
+		}
+		.col{
+			background: #fff;
+		}
+		.colo{
+			background: #f1f1f1;
+		}
+		.pic{
+			height:120px;
 		}
 	</style>
 </head>
@@ -145,25 +215,289 @@
 	<div id="box">
 		<div class="item">
 			<div class="item-head">
-				<p>内&nbsp;&nbsp;&nbsp;&nbsp;科</p>
+				<p>心&nbsp;&nbsp;内&nbsp;&nbsp;科</p>
 			</div>
 			<div class="item-body">
-				<ul id="ul1">
+				<ul id="ul1" class="ul11">
 					<li class="now">科室介绍</li>
-					<li>专家介绍</li>
-					<!-- <li>疾病科普</li>
-					<li>成功案例</li> -->
+					<li id="mo">专家介绍/排班</li>
+					
 				</ul>
 			</div>
 		</div>	
 		<div id="title" class="now1">
 			<div class="title1">
-				<h2>内科</h2>
+				<h2>心内科</h2>
 				<p>台州市立医院心血管内科初建于1989年，早在八十年代末及九十年代初就开展了食道电生理检查及调搏技术（主要用于超速抑制室上性心动速发作及测定窦房结功能）及安装永久性人工心脏起搏器技术，近二十年来该科收治高血压病、冠心病、心绞痛、心肌梗死、心肌病、心瓣膜病心脏病、风湿性心脏病、先天性心脏病、甲亢性心脏病、心力衰竭、各种心律失常、主动脉夹层、晕厥等病种，并积极开展心内科的介入治疗，如：冠状动脉造影术、冠状动脉球囊扩张术、冠状动脉支架植入术、肾动脉造影术、起搏器植入术、心内电生理检查及射频消融、先天性心脏病封堵术等介入治疗。经过多年的实践和探索，诊断水平及治疗水平不断地提高，收住疑难及危重病人数逐年增多，抢救急危重病的成功率也越来越高，抢救了很多危重病人的生命。 台州市立医院心血管内科现有主任医师1人，副主任医师4人，主治医师3人，住院医师3人，其中兼职教授1名，副教授2名，硕士2名，在职研究生4人，有2人次获市区两级青年科技新秀称号，技术力量雄厚。 台州市立医院心血管内科配有先进的医疗设备：DSA、多导电生理记录仪、射频消融仪、运动平板、美国太空实验室多功能监护仪、遥控心电监测仪、除颤仪、临时起搏器等。</p>
 			</div>
 			<div class="title2">
-				
-				<div class="title1-con1">
+				<div class="box-top">
+					<ul class="box1">
+						<li class="lists">专家/介绍</li>
+						<li>
+							星期一
+						</li>
+						<li>
+							星期二
+						</li>
+						<li>
+							星期三
+						</li>
+						<li>
+							星期四
+						</li>
+						<li>
+							星期五
+						</li>
+						<li>
+							星期六
+						</li>
+						<li>
+							星期日
+						</li>
+					</ul>
+					<div class="pics">
+						<div class="lis">
+						<table>
+							<tr>
+								<td colspan="0" rowspan="2" class="col">
+									<div class="pic">
+										<img src="./img/心内科/徐丹蕾 01129.JPG" alt="">
+										<div class="nav-box">
+											<p class="sizes">徐丹蕾</p>
+											<!-- <p>职称: 主任医师</p> -->
+											<p>擅长: 高血压并冠心病等疑难病症诊治及人工心脏起搏器安置、支架植入术等</p>
+										</div>
+									</div>
+								</td>
+								<td class="colo">上午</td>
+								<td class="col">值班</td>
+								<td class="colo"></td>
+								<td class="col">值班</td>
+								<td class="colo">值班</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr>
+									
+								<td class="colo">下午</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+							
+							</tr>
+							<tr>
+								<td colspan="1" rowspan="2" class="col">
+									<div class="pic">
+										<img src="./img/心内科/胡梅芳 20016.JPG" alt="">
+										<div class="nav-box">
+											<p class="sizes">胡梅芳</p>
+											<!-- <p>职称: 主任医师</p> -->
+											<p>擅长:诊治高血压病，冠心病，心律失常等心内科疾病</p>
+										</div>
+									</div>
+								</td>
+								
+								<td class="colo">上午</td>
+								<td class="col"></td>
+								<td class="colo">值班</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col">值班</td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr>
+								
+								<td class="colo">下午</td>
+								<td class="col"></td>
+								<td class="colo">值班</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr>
+								<td colspan="1" rowspan="2" class="col">
+									<div class="pic">
+										<img src="./img/心内科/缪荣华 01130.JPG" alt="">
+										<div class="nav-box">
+											<p class="sizes">缪荣华</p>
+											<!-- <p>职称: 主任医师</p> -->
+											<p>擅长:高血压并冠心并心力衰竭、心律失常的治疗</p>
+										</div>
+									</div>	
+								</td>
+								
+								<td class="colo">上午</td>
+								<td class="col"></td>
+								<td class="colo">值班</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo">值班</td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr>
+								
+								<td class="colo">下午</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col">值班</td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr>
+								<td colspan="1" rowspan="2" class="col">
+									<div class="pic">
+										<img src="./img/心内科/林杨闯 01135.JPG" alt="">
+										<div class="nav-box">
+											<p class="sizes">林杨闯</p>
+											<!-- <p>职称: 主任医师</p> -->
+											<p>擅长：高血压并冠心病等疑难病症诊治及人工心脏起搏器安置、支架植入术</p>
+										</div>
+									</div>
+								</td>
+								
+								<td class="colo">上午</td>
+								<td class="col"></td>
+								<td class="colo">值班</td>
+								<td class="col">值班</td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr>
+							
+								<td class="colo">下午</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo">值班</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr>
+								<td colspan="1" rowspan="2" class="col">
+									<div class="pic">
+										<img src="./img/心内科/徐云根 01132.JPG" alt="">
+										<div class="nav-box">
+											<p class="sizes">徐云根</p>
+											<!-- <p>职称: 主任医师</p> -->
+											<p>擅长：心血管疾病的诊治、冠脉造影、PTCA和冠脉内支架术及人工心脏起搏治疗</p>
+										</div>
+									</div>
+								</td>
+								
+								<td class="colo">上午</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col">值班</td>
+								<td class="colo">值班</td>
+								<td class="col">值班</td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr>
+								<td class="colo">下午</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr>
+								<td colspan="1" rowspan="2" class="col">
+									<div class="pic">
+										<img src="./img/心内科/陈晨 01136.JPG" alt="">
+										<div class="nav-box">
+											<p class="sizes">陈晨</p>
+											<!-- <p>职称: 主任医师</p> -->
+											<p>擅长：心血管疾病的诊治、冠脉造影、PTCA和冠脉内支架术及人工心脏起搏治疗</p>
+										</div>
+									</div>
+								</td>
+								
+								<td class="colo">上午</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo">值班</td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr>
+								<td class="colo">下午</td>
+								<td class="col">值班</td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr >
+								<td colspan="1" rowspan="2" class="col">
+									<div class="pic">
+										<img src="./img/心内科/王昌明 01118.JPG" alt="">
+										<div class="nav-box">
+											<p class="sizes">王昌明</p>
+											<!-- <p>职称: 主任医师</p> -->
+											<p>擅长：心血管疾病的诊治、冠脉造影、PTCA和冠脉内支架术及人工心脏起搏治疗</p>
+										</div>
+									</div>
+								</td>
+								
+								<td class="colo">上午</td>
+								<td class="col">值班</td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+							<tr >
+								<td class="colo">下午</td>
+								<td class="col">值班</td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								<td class="colo"></td>
+								<td class="col"></td>
+								
+							</tr>
+						</table>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="title1-con1">
 					<img src="img/man-4.jpg" alt="">
 					<div class="profile">
 						<p>姓名:徐丹蕾</p>
@@ -210,7 +544,7 @@
 						<p>职称:副主任医师</p>
 						<p>擅长：高血压并冠心病等疑难病症诊治及人工心脏起搏器安置、支架植入术</p>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<!-- <div class="title3">
 				<p>《临床心血管内科常见疾病与治疗》内容简介：心血管疾病在我国的发病率和死亡率居高不下，成为严重威胁人民健康的主要疾病，因此心血管内科的基础理论研究和临床诊疗技术也迅猛发展。《临床心血管内科常见疾病与诊治》是为满足广大基层内科医师、心血管专科医师、低年资住院医师、进修医师对博大精深的医学知识不断增长的需要而出版的。《临床心血管内科常见疾病与治疗》以内科心血管系统为基础编写，可以说就是一本心血管内科普及本。《临床心血管内科常见疾病与诊治》几乎包括了心血管内科的全部知识。全书共十六章，包括了心律失常、心力衰竭、血压异常、冠心病、心脏瓣膜病、心肌病、感染性心内膜炎、先天性心脏病、肺栓塞、主动脉夹层、周围血管病、晕厥等，有关疾病的流行病学、病因、病理和病理生理、临床表现、鉴别诊断、治疗都已包括在《临床心血管内科常见疾病与治疗》内，常见疾病的诊疗新进展在相关章节的内容中也有所反映。</p>
@@ -237,38 +571,96 @@
 			</div> -->
 		</div>
 	</div>
+	<script src="./js/jquery-1.12.4.js"></script>
 	<script>
 		var lis=document.getElementById('ul1').children;
 		var list=document.getElementById('title').children;
+		var tab = document.getElementsByClassName('lis')[0];
 		console.log(list);
-	var now=0;
-	document.onkeydown=function(e){
+		var now=0;
+	document.onkeydown=function(e){	
 		if(e.keyCode==27){
 			window.close();
 		}
 		switch(e.keyCode){
-			case 38://上
-	        now--;
-	        if(now<=0){
-	        	now=0
-	        }
+			case 38://上	
+			if($(".lis").hasClass("now3")== 1){
+				if($(".lis").offset().top<=50){
+					console.log($(".lis").offset().top)
+						$(".lis").animate({
+						'margin-top':"+=200"
+					},300)
+				}if($(".lis").offset().top>=50){
+					$(".lis").attr('margin-top','0+px')
+				}
+			}else{
+				now--;
+				if(now<=0){
+					now=0
+				}
+				for(var i=0;i<lis.length;i++){
+					lis[i].className="";
+					// console.log(list[i]);
+					list[i].style.display="none";
+					if(i==now){
+						lis[i].className="now";
+						list[i].style.display="block";
+					}
+				}
+			}	
 	        break;
+			case 39:
+				$(".lis").addClass("now3");
+				$(".lis").css('margin-top',"0");
+				if(now==1){
+					$("#ul1>li").removeClass("now");
+				}
+				
+
+			break
+			case 37:
+			 	$(".lis").removeClass("now3");
+				$(".lis").css('margin-top',"0");
+				if(now==1){
+					$("#mo").addClass("now");
+				}
+			break;
 	        case 40://下
-	        now++;
-	        if(now>=lis.length){
-	          now=lis.length-1;
-	        }
+	        if(now==1){
+			if($(".lis").hasClass("now3")== 1){
+				console.log($(".lis").offset().top)
+				if($(".lis").offset().top>=-445){
+					$(".lis").animate({
+						'margin-top':"-=200"
+					},300)
+				}}	
+			}else{
+				now++;
+				if(now>=lis.length){
+				now=lis.length-1;
+				}
+				for(var i=0;i<lis.length;i++){
+					lis[i].className="";
+					// console.log(list[i]);
+					list[i].style.display="none";
+					if(i==now){
+						lis[i].className="now";
+						list[i].style.display="block";
+					}
+				}
+			}			
 		}
-		for(var i=0;i<lis.length;i++){
-			lis[i].className="";
-			console.log(list[i]);
-			list[i].style.display="none";
-			if(i==now){
-				lis[i].className="now";
-				list[i].style.display="block";
-			}
-		}
+		
 	}
+	// var tr = document.getElementsByTagName('tr');
+	// for(var i = 0;i<tr.length;i++){
+    //             var td = tr[i].getElementsByTagName('td');
+    //             for(var j = 0;j<td.length;j++){
+    //                 if(!(j%2)){
+    //                     td[j].style.background = "#aaa";
+    //                 }
+    //             }
+    //         }
 	</script>
 </body>
 </html>
