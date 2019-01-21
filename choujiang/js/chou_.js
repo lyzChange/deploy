@@ -411,6 +411,7 @@ $(function () {
                 list[i].classList.add();
                 if (e.keyCode == 13) {
                     console.log(2222)
+                    $(".bg-box").html("sdflasdk");
                     if (datas.resultCode == "0000") {
                         if (datas.content.flag == 1) {
                             console.log(2222)
@@ -433,7 +434,6 @@ $(function () {
                     }
                     }
 
-                    
                     if (datas.resultCode == "1004") {
                         $(".tk1").show();
                         console.log(1111111)
@@ -497,7 +497,7 @@ $(function () {
                 datas = data
                 console.log(datas);
         });
-        return;
+       
         var touzi = "没投资11";
         if (touzi == "没投资") {
             $(".ok-img").on('click', function () {
