@@ -278,8 +278,8 @@ li > span:nth-child(2) {
     display:none;
     position: absolute;
     z-index:2;
-    background: #000;
-    opacity: 0.9;
+    /* background: #000;
+    opacity: 0.9; */
 }
 #gz-box{
     width:1043;
