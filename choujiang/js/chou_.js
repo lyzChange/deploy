@@ -4,8 +4,10 @@ var datas;
 var get_bid = get_bi_id_();
 
 var ajax = new Ajax();
-var ajaxUrl= Get_queryUserTVWLotteryInfo+"?uuid="+123+"&billId="+get_bid + '=';
+var ajaxUrl= Get_queryUserTVWLotteryInfo+"?uuid="+123+"&billId="+'dnN4c3o4MTg1NTk5OTM=';
 ajax.get(ajaxUrl, function (data) {
+    data = JSON.parse(data);
+    datas = data
     if (data.resultCode == "0000") { //成功
         // console.log(1111111)
         if (data.content.flag == "0") { //不可抽奖
@@ -43,8 +45,8 @@ ajax.get(ajaxUrl, function (data) {
         $(".image4").show();
         $(".image3").hide();
     }
-    data = JSON.parse(data);
-    datas = data
+    // data = JSON.parse(data);
+    // datas = data
     console.log(datas);
     $("#jsd").html(JSON.stringify(data))
     $('#jrwrtsd').html(JSON.stringify(get_bid))    
@@ -195,9 +197,9 @@ ajax.get(ajaxUrl, function (data) {
 //     }
 // });
 //抽奖代码
-$(".ok").on('click', function () {
-    $(".gz").hide();
-})
+// $(".ok").on('click', function () {
+//     $(".gz").hide();
+// })
 $(function () {
     var $btn = $('.zhuanzhou'); // 旋转的div
     var cishu = 1; //初始次数，由后台传入
@@ -519,6 +521,8 @@ $(function () {
         var ajax = new Ajax();
         var ajaxUrl= get_userTVWLottery+"?uuid="+123+"&billId="+getBillId+ '=';
         ajax.get(ajaxUrl, function (data) {
+            data = JSON.parse(data);
+            datas = data
             var datas = ['足球','移动电源','15.88元话费','1GB国内流量','8.88元话费','5.88元话费']
                 var datas_rotat = [60,120,180,240,300,360]
                 if(data.resultMsg=='成功'){
