@@ -410,9 +410,9 @@ $(function () {
 
                         console.log(22222)
                     }
-                }
-            }
-        // }
+                // }
+            // }
+        }
         if (e.keyCode == "27") {
             if ($(".gz").show()) {
                 $(".gz").hide();
