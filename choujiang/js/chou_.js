@@ -352,14 +352,15 @@ $(function () {
                 }
                 break;
         }
-        if(e.keyCode == 13){
-            $(".wcs").show();
-            $(".bg-box").html("sdflasdk");
-        }
+        
         for (var i = 0; i < list.length; i++) {
             list[i].classList.remove();
             if (i == now) {
                 list[i].classList.add();
+                if(e.keyCode == 13){
+                    $(".wcs").show();
+                    $(".bg-box").html("sdflasdk");
+                }
                 // if (e.keyCode == 13) {
                 //     console.log(2222)
                 //     $(".bg-box").html("sdflasdk");
