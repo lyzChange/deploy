@@ -273,13 +273,13 @@ li > span:nth-child(2) {
        
 }
 .gz{
-    width:980px;
-    height:520px;
+    width:1280px;
+    height:720px;
     display:none;
     position: absolute;
     z-index:2;
-    /* background: #000;
-    opacity: 0.9; */
+    background: #000;
+    opacity: 0.9;
 }
 #gz-box{
     width:1043;
