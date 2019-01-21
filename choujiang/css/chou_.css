@@ -274,18 +274,18 @@ li > span:nth-child(2) {
 }
 .gz{
     width:750px;
-    height:50px;
+    height:300px;
     display:none;
     position: absolute;
     z-index:2;
 }
-.gz>span{
+/* .gz>span{
     width:1280px;
     height:720px;
     display:block;
     background: #000;
     opacity: 0.9;
-}
+} */
 #gz-box{
     width:1043;
     height:480px;
@@ -296,6 +296,8 @@ li > span:nth-child(2) {
     overflow: auto;
 }
 #imgdf{
+    width:200px;
+    height:200px;
     margin-right:50px;
     position: relative;
     top:0;
