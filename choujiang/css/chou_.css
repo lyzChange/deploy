@@ -283,7 +283,7 @@ li > span:nth-child(2) {
 }
 #gz-box{
     width:1043;
-    height:480px;
+    height:700px;
     position: absolute;
     top:108px;
     left:119px;
@@ -291,7 +291,7 @@ li > span:nth-child(2) {
     overflow: auto;
 }
 #imgdf{
-    width:1200px;
+    width:1000px;
     height:500px;
     margin-right:50px;
     position: relative;
