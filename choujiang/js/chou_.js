@@ -51,62 +51,6 @@ var get_bid = get_bi_id_();
 //     // $('#jrwrtsd').html(JSON.stringify(get_bid))    
 // });
 
-// $.ajax({
-//     type: 'POST',
-//     url: Get_queryUserTVWLotteryInfo,
-//     async:false,
-//     data: {
-//         "uuid": '123',
-//         "billId": get_bid + '='
-//     },
-//     success: function (data) {
-//         if (data.resultCode == "0000") { //成功
-//             // console.log(1111111)
-//             if (data.content.flag == "0") { //不可抽奖
-//                 // console.log(1111111)
-//                 str = "<h2>" + "太厉害啦！您已抽中" + data.content.awardInfo.awardName + "奖品" + "<h2>";
-//                 $(".user").append(str)
-//                 $(".image5").show();
-//                 $(".image3").hide();
-//                 $(".image2").show();
-//                 $(".image1").hide();
-//             } else if (data.content.flag == "1") { //可抽奖
-//                 console.log(222222)
-//                 str = "<h2>" + "恭喜您获得1次新年“猪”福，快来点击抽奖 哦！" + "</h2>";
-//                 $(".user").append(str)
-//                 $(".image4").show();
-//                 $(".image3").hide();
-//             }
-//         } else if (data.resultCode == "1002") { //
-//             console.log(12222221)
-//             str1 = "<h3>" + "您离抽奖还差一步" + "</h3>";
-//             str2 = "<span>" + "订购影视动漫VIP包 （39.9元" + "</span>";
-//             str3 = "<p>" + "立即参加幸运抽奖哦!" + "</p>"
-//             str4 = "<img src='./images/cpb_img.png'>";
-//             $(".user").append(str1);
-//             $(".user").append(str2);
-//             $(".user").append(str3);
-//             $(".user").append(str4);
-//             $(".anniu").addClass("bl");
-//             $(".image4").show();
-//             $(".image3").hide();
-//         } else if (data.resultCode == "1004") { //
-//             str = "<h2>" + "您的宽带电视账户未办理统一支付，请详询 10086或前往营业厅办理，办理成功后即可抽奖哦！" + "</h2>";
-//             $(".user").append(str);
-//             $(".image5").hide();
-//             $(".image4").show();
-//             $(".image3").hide();
-//         }
-//         datas = data
-        
-//         $("#jsd").html(JSON.stringify(data))
-//         $('#jrwrtsd').html(JSON.stringify(get_bid))
-        
-//     }, error: function (e) {
-//         console.log(e);
-//     }
-// });
-
 
 var datas = {
     "resultCode": "0000",
@@ -121,6 +65,9 @@ var datas = {
 		}
     }
 }
+// if(debug){
+
+// }
 if(datas.resultCode == "0000"){
 	console.log(1111111)
 	if(datas.content.flag=="0"){
@@ -405,60 +352,64 @@ $(function () {
                 }
                 break;
         }
+        if(e.keyCode == 13){
+            $(".wcs").show();
+            $(".bg-box").html("sdflasdk");
+        }
         for (var i = 0; i < list.length; i++) {
             list[i].classList.remove();
             if (i == now) {
                 list[i].classList.add();
-                if (e.keyCode == 13) {
-                    console.log(2222)
-                    $(".bg-box").html("sdflasdk");
-                    if (datas.resultCode == "0000") {
-                        if (datas.content.flag == 1) {
-                            console.log(2222)
-                            $(".anniu2").click();
-                            if ($(".jl-tk").show(), $(".wcs").show()) {
-                                $(".jl-tk").hide();
-                                $(".wcs").hide();
-                            }
-                        }
-                    }
-                    if (datas.resultCode == "1002") {
-                        $(".tk").show();
-                        if ($(".tk").show()) {
+                // if (e.keyCode == 13) {
+                //     console.log(2222)
+                //     $(".bg-box").html("sdflasdk");
+                //     if (datas.resultCode == "0000") {
+                //         if (datas.content.flag == 1) {
+                //             console.log(2222)
+                //             $(".anniu2").click();
+                //             if ($(".jl-tk").show(), $(".wcs").show()) {
+                //                 $(".jl-tk").hide();
+                //                 $(".wcs").hide();
+                //             }
+                //         }
+                //     }
+                //     if (datas.resultCode == "1002") {
+                //         $(".tk").show();
+                //         if ($(".tk").show()) {
 
-                        if (i == 0) {
-                            window.location.href = "pay_page.html"
-                            //点击跳转订购页面
-                            console.log(132346)
-                        }
-                    }
-                    }
+                //         if (i == 0) {
+                //             window.location.href = "pay_page.html"
+                //             //点击跳转订购页面
+                //             console.log(132346)
+                //         }
+                //     }
+                //     }
 
-                    if (datas.resultCode == "1004") {
-                        $(".tk1").show();
-                        console.log(1111111)
-                    }
-                    if (i == 2) {
-                        if (datas.resultCode == "1002") {
+                //     if (datas.resultCode == "1004") {
+                //         $(".tk1").show();
+                //         console.log(1111111)
+                //     }
+                //     if (i == 2) {
+                //         if (datas.resultCode == "1002") {
 
-                        } else if (datas.resultCode !== "1002") {
-                            if (datas.content.flag == 0) {
-                            } else if (datas.content.flag == 1) {
-                                $(".anniu2").click();
-                            }
-                        }
-                        if ($(".jl-tk").show(), $(".wcs").show()) {
-                            $(".jl-tk").hide();
-                            $(".wcs").hide();
-                        }
-                        console.log(11111)
-                    }
-                    if (i == 1) {
-                        $(".gz").show();
+                //         } else if (datas.resultCode !== "1002") {
+                //             if (datas.content.flag == 0) {
+                //             } else if (datas.content.flag == 1) {
+                //                 $(".anniu2").click();
+                //             }
+                //         }
+                //         if ($(".jl-tk").show(), $(".wcs").show()) {
+                //             $(".jl-tk").hide();
+                //             $(".wcs").hide();
+                //         }
+                //         console.log(11111)
+                //     }
+                //     if (i == 1) {
+                //         $(".gz").show();
 
-                        console.log(22222)
-                    }
-                }
+                //         console.log(22222)
+                //     }
+                // }
             }
         }
         if (e.keyCode == "27") {
