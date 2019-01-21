@@ -47,8 +47,8 @@ ajax.get(ajaxUrl, function (data) {
     }
     
     console.log(datas);
-    $("#jsd").html(JSON.stringify(data))
-    $('#jrwrtsd').html(JSON.stringify(get_bid))    
+    // $("#jsd").html(JSON.stringify(data))
+    // $('#jrwrtsd').html(JSON.stringify(get_bid))    
 });
 
 // $.ajax({
