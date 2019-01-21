@@ -53,10 +53,10 @@ var get_bid = get_bi_id_();
 
 
 var datas = {
-    "resultCode": "1002",
+    "resultCode": "1004",
     "resultMsg": "成功",
     "content": {
-        "flag": "1",
+        "flag": "0",
         "mobile": "157****1030",
             "awardInfo":{
                 "awardName":"5.88元话费",
