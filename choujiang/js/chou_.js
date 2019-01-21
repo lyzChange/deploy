@@ -363,7 +363,7 @@ $(function () {
                 // }
                 if (e.keyCode == 13) {
                     console.log(2222)
-                    $(".bg-box").html("sdflasdk");
+                    // $(".bg-box").html("sdflasdk");
                     if (datas.resultCode == "0000") {
                         if (datas.content.flag == 1) {
                             console.log(2222)
