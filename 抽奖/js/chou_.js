@@ -518,7 +518,7 @@ $(function () {
         
         var ajax = new Ajax();
         var ajaxUrl= get_userTVWLottery+"?uuid="+123+"&billId="+getBillId+ '=';
-        ajax.post(ajaxUrl, function (data) {
+        ajax.get(ajaxUrl, function (data) {
             var datas = ['足球','移动电源','15.88元话费','1GB国内流量','8.88元话费','5.88元话费']
                 var datas_rotat = [60,120,180,240,300,360]
                 if(data.resultMsg=='成功'){
