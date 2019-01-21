@@ -3,54 +3,54 @@ var datas;
 // console.log(getBillId);
 var get_bid = get_bi_id_();
 
-var ajax = new Ajax();
-var ajaxUrl= Get_queryUserTVWLotteryInfo+"?uuid="+123+"&billId="+'dnN4c3o4MTg1NTk5OTM=';
-ajax.get(ajaxUrl, function (data) {
-    data = JSON.parse(data);
-    datas = data
-    if (data.resultCode == "0000") { //成功
-        // console.log(1111111)
-        if (data.content.flag == "0") { //不可抽奖
-            // console.log(1111111)
-            str = "<h2>" + "太厉害啦！您已抽中" + data.content.awardInfo.awardName + "奖品" + "<h2>";
-            $(".user").append(str)
-            $(".image5").show();
-            $(".image3").hide();
-            $(".image2").show();
-            $(".image1").hide();
-        } else if (data.content.flag == "1") { //可抽奖
-            console.log(222222)
-            str = "<h2>" + "恭喜您获得1次新年“猪”福，快来点击抽奖 哦！" + "</h2>";
-            $(".user").append(str)
-            $(".image4").show();
-            $(".image3").hide();
-        }
-    } else if (data.resultCode == "1002") { //
-        console.log(12222221)
-        str1 = "<h3>" + "您离抽奖还差一步" + "</h3>";
-        str2 = "<span>" + "订购影视动漫VIP包 （39.9元" + "</span>";
-        str3 = "<p>" + "立即参加幸运抽奖哦!" + "</p>"
-        str4 = "<img src='./images/cpb_img.png'>";
-        $(".user").append(str1);
-        $(".user").append(str2);
-        $(".user").append(str3);
-        $(".user").append(str4);
-        $(".anniu").addClass("bl");
-        $(".image4").show();
-        $(".image3").hide();
-    } else if (data.resultCode == "1004") { //
-        str = "<h2>" + "您的宽带电视账户未办理统一支付，请详询 10086或前往营业厅办理，办理成功后即可抽奖哦！" + "</h2>";
-        $(".user").append(str);
-        $(".image5").hide();
-        $(".image4").show();
-        $(".image3").hide();
-    }
-    // data = JSON.parse(data);
-    // datas = data
-    console.log(datas);
-    $("#jsd").html(JSON.stringify(data))
-    $('#jrwrtsd').html(JSON.stringify(get_bid))    
-});
+// var ajax = new Ajax();
+// var ajaxUrl= Get_queryUserTVWLotteryInfo+"?uuid="+123+"&billId="+get_bid + '=';
+// ajax.get(ajaxUrl, function (data) {
+//     data = JSON.parse(data);
+//     datas = data
+//     if (data.resultCode == "0000") { //成功
+//         // console.log(1111111)
+//         if (data.content.flag == "0") { //不可抽奖
+//             // console.log(1111111)
+//             str = "<h2>" + "太厉害啦！您已抽中" + data.content.awardInfo.awardName + "奖品" + "<h2>";
+//             $(".user").append(str)
+//             $(".image5").show();
+//             $(".image3").hide();
+//             $(".image2").show();
+//             $(".image1").hide();
+//         } else if (data.content.flag == "1") { //可抽奖
+//             console.log(222222)
+//             str = "<h2>" + "恭喜您获得1次新年“猪”福，快来点击抽奖 哦！" + "</h2>";
+//             $(".user").append(str)
+//             $(".image4").show();
+//             $(".image3").hide();
+//         }
+//     } else if (data.resultCode == "1002") { //
+//         console.log(12222221)
+//         str1 = "<h3>" + "您离抽奖还差一步" + "</h3>";
+//         str2 = "<span>" + "订购影视动漫VIP包 （39.9元" + "</span>";
+//         str3 = "<p>" + "立即参加幸运抽奖哦!" + "</p>"
+//         str4 = "<img src='./images/cpb_img.png'>";
+//         $(".user").append(str1);
+//         $(".user").append(str2);
+//         $(".user").append(str3);
+//         $(".user").append(str4);
+//         $(".anniu").addClass("bl");
+//         $(".image4").show();
+//         $(".image3").hide();
+//     } else if (data.resultCode == "1004") { //
+//         str = "<h2>" + "您的宽带电视账户未办理统一支付，请详询 10086或前往营业厅办理，办理成功后即可抽奖哦！" + "</h2>";
+//         $(".user").append(str);
+//         $(".image5").hide();
+//         $(".image4").show();
+//         $(".image3").hide();
+//     }
+    
+//     console.log(datas);
+//     $("#jsd").html(JSON.stringify(data))
+//     $('#jrwrtsd').html(JSON.stringify(get_bid))    
+// });
+
 // $.ajax({
 //     type: 'POST',
 //     url: Get_queryUserTVWLotteryInfo,
@@ -108,56 +108,56 @@ ajax.get(ajaxUrl, function (data) {
 // });
 
 
-// var datas = {
-//     "resultCode": "1002",
-//     "resultMsg": "成功",
-//     "content": {
-//         // "flag": "1",
-//         // "mobile": "157****1030",
-//         //     "awardInfo":{
-//         //         "awardName":"5.88元话费",
-//         //         "parValue":"5.88 ",
-//         //     "unit":"元"
-// 		// }
-//     }
-// }
-// if(datas.resultCode == "0000"){
-// 	console.log(1111111)
-// 	if(datas.content.flag=="0"){
-// 		console.log(1111111)
-// 		str="<h2>"+"太厉害啦！您已抽中"+datas.content.awardInfo.awardName+"奖品"+"<h2>";
-// 		$(".user").append(str)
-// 		$(".image5").show();
-// 		$(".image3").hide();
-// 		$(".image2").show();
-// 		$(".image1").hide();
-// 	}else if(datas.content.flag=="1"){
-// 		console.log(222222)
-// 		str="<h2>"+"恭喜您获得1次新年“猪”福，快来点击抽奖 哦！"+"</h2>";
-// 		$(".user").append(str)
-// 		$(".image4").show();
-// 		$(".image3").hide();
-// 	}
-// }else if(datas.resultCode == "1002"){
-// 		console.log(12222221)
-// 		str1="<h1>"+"您离抽奖还差一步"+"</h1>";
-// 		str2="<span>"+"订购影视动漫VIP包 （39.9元)"+"</span>";
-// 		str3="<p>"+"立即参加幸运抽奖哦!"+"</p>"
-// 		str4="<img src='./images/cpb_img.png'>";
-// 		$(".user").append(str1);
-// 		$(".user").append(str2);
-// 		$(".user").append(str3);
-// 		$(".user").append(str4);
-// 		$(".anniu").addClass("bl");
-// 		$(".image4").show();
-// 		$(".image3").hide();	
-// }else if(datas.resultCode == "1004"){
-// 		str="<h2>"+"您的宽带电视账户未办理统一支付，请详询 10086或前往营业厅办理，办理成功后即可抽奖哦！"+"</h2>";
-// 		$(".user").append(str);
-// 		$(".image5").hide();
-// 		$(".image4").show();
-// 		$(".image3").hide();	
-// 	}
+var datas = {
+    "resultCode": "0000",
+    "resultMsg": "成功",
+    "content": {
+        "flag": "1",
+        "mobile": "157****1030",
+            "awardInfo":{
+                "awardName":"5.88元话费",
+                "parValue":"5.88 ",
+            "unit":"元"
+		}
+    }
+}
+if(datas.resultCode == "0000"){
+	console.log(1111111)
+	if(datas.content.flag=="0"){
+		console.log(1111111)
+		str="<h2>"+"太厉害啦！您已抽中"+datas.content.awardInfo.awardName+"奖品"+"<h2>";
+		$(".user").append(str)
+		$(".image5").show();
+		$(".image3").hide();
+		$(".image2").show();
+		$(".image1").hide();
+	}else if(datas.content.flag=="1"){
+		console.log(222222)
+		str="<h2>"+"恭喜您获得1次新年“猪”福，快来点击抽奖 哦！"+"</h2>";
+		$(".user").append(str)
+		$(".image4").show();
+		$(".image3").hide();
+	}
+}else if(datas.resultCode == "1002"){
+		console.log(12222221)
+		str1="<h1>"+"您离抽奖还差一步"+"</h1>";
+		str2="<span>"+"订购影视动漫VIP包 （39.9元)"+"</span>";
+		str3="<p>"+"立即参加幸运抽奖哦!"+"</p>"
+		str4="<img src='./images/cpb_img.png'>";
+		$(".user").append(str1);
+		$(".user").append(str2);
+		$(".user").append(str3);
+		$(".user").append(str4);
+		$(".anniu").addClass("bl");
+		$(".image4").show();
+		$(".image3").hide();	
+}else if(datas.resultCode == "1004"){
+		str="<h2>"+"您的宽带电视账户未办理统一支付，请详询 10086或前往营业厅办理，办理成功后即可抽奖哦！"+"</h2>";
+		$(".user").append(str);
+		$(".image5").hide();
+		$(".image4").show();
+		$(".image3").hide();	
+	}
 
 
 // //中奖名单数据渲染页面 历史数据 下面轮播
@@ -521,8 +521,8 @@ $(function () {
         var ajax = new Ajax();
         var ajaxUrl= get_userTVWLottery+"?uuid="+123+"&billId="+getBillId+ '=';
         ajax.get(ajaxUrl, function (data) {
+            console.log(data);
             data = JSON.parse(data);
-            datas = data
             var datas = ['足球','移动电源','15.88元话费','1GB国内流量','8.88元话费','5.88元话费']
                 var datas_rotat = [60,120,180,240,300,360]
                 if(data.resultMsg=='成功'){
@@ -535,8 +535,7 @@ $(function () {
                 }else{
                     $(".wcs").show();
                 }
-                console.log(data);
-                data = JSON.parse(data);
+                
                 datas = data
                 console.log(datas);
         });
