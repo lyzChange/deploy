@@ -56,7 +56,7 @@ var datas = {
     "resultCode": "1002",
     "resultMsg": "成功",
     "content": {
-        "flag": "0",
+        "flag": "1",
         "mobile": "157****1030",
             "awardInfo":{
                 "awardName":"5.88元话费",
@@ -402,12 +402,12 @@ $(function () {
                             }
                         }
                     }
-                    if (i == 0) {
+                    if (i == 0) { //立即 订购
                         window.location.href = "pay_page.html"
                         //点击跳转订购页面
                         console.log(132346)
                     }
-                    if (i == 1) {
+                    if (i == 1) { //规则
                         $(".gz").show();
 
                         console.log(22222)
