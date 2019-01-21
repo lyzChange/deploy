@@ -357,50 +357,46 @@ $(function () {
             if (i == now) {
                 if (e.keyCode == 13) {
                     console.log(2222)
-                    // $(".bg-box").html("sdflasdk");
-                    $(".gz").css("display","block");
+                    // $(".gz").css("display","block");
                     
 
                     if (datas.resultCode == "1004") {
                         $(".tk1").show();
                         console.log(1111111)
                     }
-                    // if (i == 2) {
-                    //     if (datas.resultCode == "1002") {
-
-                    //     } else if (datas.resultCode !== "1002") {
-                    //         if (datas.content.flag == 0) {
-                    //         } else if (datas.content.flag == 1) {
-                    //             $(".anniu2").click();
-                    //         }
-                    //     }
-                    //     if ($(".jl-tk").show(), $(".wcs").show()) {
-                    //         $(".jl-tk").hide();
-                    //         $(".wcs").hide();
-                    //     }
-                    //     console.log(11111)
-                    //     if (datas.resultCode == "0000") {
-                    //         if (datas.content.flag == 1) {
-                    //             console.log(2222)
-                    //             $(".anniu2").click();
-                    //             if ($(".jl-tk").show(), $(".wcs").show()) {
-                    //                 $(".jl-tk").hide();
-                    //                 $(".wcs").hide();
-                    //             }
-                    //         }
-                    //     }
-                    //     if (datas.resultCode == "1002") {
-                    //         $(".tk").show();
-                    //         if ($(".tk").show()) {
-                    //             window.location.href = "pay_page.html"
-                    //             if (i == 0) {
-                    //                 window.location.href = "pay_page.html"
-                    //                 //点击跳转订购页面
-                    //                 console.log(132346)
-                    //             }
-                    //         }
-                    //     }
-                    // }
+                    if (i == 2) {
+                        if (datas.resultCode == "1002") {
+                            $(".tk").show();
+                            if ($(".tk").show()) {
+                                window.location.href = "pay_page.html"
+                                if (i == 0) {
+                                    window.location.href = "pay_page.html"
+                                    //点击跳转订购页面
+                                    console.log(132346)
+                                }
+                            }
+                        } else if (datas.resultCode !== "1002") {
+                            if (datas.content.flag == 0) {
+                            } else if (datas.content.flag == 1) {
+                                $(".anniu2").click();
+                            }
+                        }
+                        if ($(".jl-tk").show(), $(".wcs").show()) {
+                            $(".jl-tk").hide();
+                            $(".wcs").hide();
+                        }
+                        console.log(11111)
+                        if (datas.resultCode == "0000") {
+                            if (datas.content.flag == 1) {
+                                console.log(2222)
+                                $(".anniu2").click();
+                                if ($(".jl-tk").show(), $(".wcs").show()) {
+                                    $(".jl-tk").hide();
+                                    $(".wcs").hide();
+                                }
+                            }
+                        }
+                    }
                     if (i == 1) {
                         $(".gz").show();
 
