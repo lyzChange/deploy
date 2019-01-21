@@ -353,27 +353,12 @@ $(function () {
                 break;
         }
         
-        // for (var i = 0; i <= list.length; i++) {
-        //     list[i].classList.remove();
-        //     if (i == now) {
-        //         list[i].classList.add();
-                // if(e.keyCode == 13){
-                //     $(".wcs").show();
-                //     $(".bg-box").html("sdflasdk");
-                // }
+        for (var i = 0; i <= list.length; i++) {
+            if (i == now) {
                 if (e.keyCode == 13) {
                     console.log(2222)
                     // $(".bg-box").html("sdflasdk");
-                    if (datas.resultCode == "0000") {
-                        if (datas.content.flag == 1) {
-                            console.log(2222)
-                            $(".anniu2").click();
-                            if ($(".jl-tk").show(), $(".wcs").show()) {
-                                $(".jl-tk").hide();
-                                $(".wcs").hide();
-                            }
-                        }
-                    }
+                    
                     if (datas.resultCode == "1002") {
                         $(".tk").show();
                         if ($(".tk").show()) {
@@ -404,14 +389,24 @@ $(function () {
                             $(".wcs").hide();
                         }
                         console.log(11111)
+                        if (datas.resultCode == "0000") {
+                            if (datas.content.flag == 1) {
+                                console.log(2222)
+                                $(".anniu2").click();
+                                if ($(".jl-tk").show(), $(".wcs").show()) {
+                                    $(".jl-tk").hide();
+                                    $(".wcs").hide();
+                                }
+                            }
+                        }
                     }
                     if (i == 1) {
                         $(".gz").show();
 
                         console.log(22222)
                     }
-                // }
-            // }
+                }
+            }
         }
         if (e.keyCode == "27") {
             if ($(".gz").show()) {
