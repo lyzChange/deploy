@@ -1,0 +1,100 @@
+/**
+ * Created by YSTen on 2018/8/1.
+ */
+var queryPriceData = {
+    "result":"ORD-000",
+    "message":"",
+    "detailMessage":"",
+    "data":{
+        "backgroundImg":"",
+        "list":[
+            {
+                "displayNo":"1",
+                "isOrdered":"YES",
+                "productId":"112223",
+                "productName":"影视包月包",
+                "payDesc":"汇聚海内外电视剧，包括卫视跟播热剧、视频网站独播剧、港剧、英美剧、日（因版权方要求不能入包的内容除外）如需退订包月，请至“我的”-“个人中心”“订单”中操作，退订次月生效。",
+                "refundDesc":"首月按天计费，月底到期自动续订",
+                "price":"1500",
+                "payPrice":"1000",
+                "ppImgAddr":"images/movie_vip.png",
+                "payType":"UNTIFY|PHONE",
+                "productName":"影视VIP",
+                "renewStatus":"open",
+                "promotionInfoBeanList":[
+                    {
+                        "promotionId":"1234",
+                        "promotionName":"营销1",
+                        "promotionType":"",
+                        "promotionDesc":"营销描述",
+                        "cornImgAddr":"http://1111.com.s",
+                        "promotionImgAddr":"http://1111.com.s",
+                        "promotionPlayImgList":[],
+                        "promotionPayTypes":"UNTIFY",
+                        "promotionPrice":"",
+                        "actionType":"",
+                        "actionUrl":"",
+                        "productInfoBeanList":[
+                            {
+                                "programId":"1111"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "displayNo":"2",
+                "isOrdered":"YES",
+                "productId":"112223",
+                "productName":"影视包月包",
+                "payDesc":"包月说明",
+                "refundDesc":"退订说明",
+                "price":"1500",
+                "payPrice":"1200",
+                "ppImgAddr":"",
+                "payType":"UNTIFY",
+                "productName":"影视VIP",
+                "renewStatus":"open",
+            },
+            {
+                "displayNo":"3",
+                "isOrdered":"NO",
+                "productId":"112223",
+                "productName":"影视包月包",
+                "payDesc":"包月说明",
+                "refundDesc":"退订说明",
+                "price":"1500",
+                "payPrice":"1300",
+                "ppImgAddr":"",
+                "payType":"PHONE"
+            },
+            {
+                "displayNo":"4",
+                "isOrdered":"YES",
+                "productId":"112223",
+                "productName":"影视包月包",
+                "payDesc":"包月说明",
+                "refundDesc":"退订说明",
+                "price":"1500",
+                "payPrice":"1400",
+                "ppImgAddr":"",
+                "payType":"PHONE|UNTIFY"
+            }
+        ]
+    }
+}
+queryPriceData = {"data":{"backgroundImg":"","productList":[{"displayNo":"1","imageAddr":"http:\/\/zj-mobile-ystzw-imagescenter.wasu.tv:8083\/zj\/poster\/image\/panle\/dyvipby.jpg","introduction":"汇聚海内外院线刚下映的新片，以及经典口碑大片，让您足不出户尽享沙发院线（特殊版权内容除外）。|退订请至“我的-个人中心-订单”中操作。","isOrdered":"NO","payDesc":"汇聚海内外院线刚下映的新片，以及经典口碑大片，让您足不出户尽享沙发院线（特殊版权内容除外）。","payPrice":"2000","payType":"UNTIFY","price":"2000","productId":"ZJDJB0001","productName":"电影VIP包月","promotionInfoBeanList":[],"refundDesc":"退订请至“我的-个人中心-订单”中操作","renewStatus":"1","validDateDesc":"订购首月按天收费，月底到期自动续订，退订次月生效。"},{"displayNo":"2","imageAddr":"http:\/\/zj-mobile-ystzw-imagescenter.wasu.tv:8083\/zj\/poster\/image\/panle\/dsjvipby.jpg","introduction":"汇聚海内外电视剧，包括卫视跟播热剧、视频网站独播剧、港剧、英美剧、日韩剧等（特殊版权内容除外）。|退订请至“我的-个人中心-订单”中操作。","isOrdered":"NO","payDesc":"汇聚海内外电视剧，包括卫视跟播热剧、视频网站独播剧、港剧、英美剧、日韩剧等（特殊版权内容除外）。","payPrice":"2000","payType":"UNTIFY","price":"2000","productId":"ZJDJB0002","productName":"电视剧VIP包月","promotionInfoBeanList":[],"refundDesc":"退订请至“我的-个人中心-订单”中操作。","renewStatus":"1","validDateDesc":"订购首月按天收费，月底到期自动续订，退订次月生效。"},{"displayNo":"3","imageAddr":"http:\/\/zj-mobile-ystzw-imagescenter.wasu.tv:8083\/zj\/poster\/image\/panle\/sedmvipby.jpg","introduction":"汇聚海内外热播动漫，原版动漫，以及儿歌、国学、游戏、英语等益智早教类节目（特殊版权内容除外）。|退订请至“我的-个人中心-订单”中操作。","isOrdered":"NO","payDesc":"汇聚海内外热播动漫，原版动漫，以及儿歌、国学、游戏、英语等益智早教类节目（特殊版权内容除外）。","payPrice":"2000","payType":"UNTIFY","price":"2000","productId":"ZJDJB0011","productName":"少儿动漫VIP包月","promotionInfoBeanList":[],"refundDesc":"退订请至“我的-个人中心-订单”中操作。","renewStatus":"1","validDateDesc":"订购首月按天收费，月底到期自动续订，退订次月生效。"}]},"detailMessage":"查询成功!","message":"成功","result":"ORD-000","success":true};
+var judgeData = {
+    "result":"ORD-000",
+    "message":"",
+    "detailMessage":"",
+    "data":{
+        "qrCode":"http://www.baidu.com",
+        "validate":"10",
+        "payId":"13480962347",
+        "state":"ON"
+    }
+}
+var smsData = {
+    "result":"ORD-000",
+}

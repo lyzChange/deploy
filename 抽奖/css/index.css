@@ -1,0 +1,928 @@
+﻿body {margin:0;padding:0;font-size:12px;}
+div,span,ol,ul,li,dl,dt,dd,em,strong,var,p,h1,h2,h3,h4,h5,h6,input{margin:0;padding:0;}
+a{text-decoration:none;cursor:pointer;font-style:normal;outline:none;}
+em,strong,var {font-weight:normal;font-style:normal;}
+h1,h2,h3,h4,h5,h6 {font-size:12px;font-weight:normal;}
+img{vertical-align:top;border:none;}
+ul,ol{list-style:none;}
+
+body {
+    background: url("../images/bg.png") no-repeat;
+}
+#triangle{
+    opacity: 0.3;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-right: 16px solid #000000;
+    border-bottom: 10px solid transparent;
+}
+
+/*
+* 顶部提示文字
+*/
+.top_bar {
+    position: relative;
+    width: 100%;
+    height:133px;
+    top:0;
+    left: 0;
+}
+.top_bar span {
+    position: absolute;
+    top:66px;
+    left: 96px;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+/*
+* 左侧支付方式选择页面
+*/
+.left_part {
+    position: absolute;
+    width: 390px;
+    height: 506px;
+    overflow: hidden;
+}
+
+.pay_radio {
+    position: absolute;
+    width: 245px;
+    top:0;
+    left: 92px;
+    padding-top: 18px;
+}
+.pay_radio li {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 58px;
+    margin-bottom: 26px;
+    font-size: 25px;
+    color: #E6E6E6;
+    opacity: 0.7;
+    text-align: center;
+    line-height: 58px;
+}
+.pay_radio li del {
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.pay_radio li del::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 245px;
+    height: 58px;
+    background: #E6E6E6;
+    opacity: 0.2;
+    z-index: -10;
+    border-radius: 8px;
+}
+/*.pay_radio li::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 245px;
+    height: 58px;
+    background: #E6E6E6;
+    opacity: 0.2;
+    z-index: -10;
+    border-radius: 8px;
+}*/
+/*支付方式选中效果*/
+.pay_radio .select {
+    opacity: 1;
+    color: #FFFFFF;
+}
+.pay_radio .select::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 245px;
+    height: 58px;
+    background: #00B7EE;
+    opacity: 0.3;
+    z-index: -10;
+    border-radius: 8px;
+}
+.pay_radio .focus::after {
+    opacity: 0.8;
+}
+/*选中状态的三角箭头*/
+.pay_radio .select::before {
+    content: '';
+    position: absolute;
+    top:18px;
+    left: 282px;
+    opacity: 0.3;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-right: 16px solid #000000;
+    border-bottom: 10px solid transparent;
+}
+/*焦点选择框*/
+/*.pay_radio .focus::after {
+    content: '';
+    position: absolute;
+    top:-2px;
+    left: -2px;
+    width: 241px;
+    height: 54px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 0 25px 10px rgba(0,157,255,0.80);
+    border-radius: 8px;
+}*/
+.pay_radio .focus del::before {
+    content: '';
+    position: absolute;
+    /*top:0px;
+    left: 0px;
+    width: 241px;
+    height: 54px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 0 18px 8px rgba(0,157,255,0.80);
+    border-radius: 8px;*/
+    top:-24px;
+    left: -23px;
+    width: 292px;
+    height: 107px;
+    background: url("../images/payTypeFocus.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/*
+* 右侧区域
+*/
+.right_part {
+    position: absolute;
+    left: 390px;
+    width: 794px;
+    height: 506px;
+}
+.right_part::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 794px;
+    height: 506px;
+    border-radius: 8px;
+    opacity: 0.3;
+    background: #000000;
+    z-index: -10;
+}
+
+/*二维码区域*/
+.qrCode_part {
+    display: block;
+    overflow: hidden;
+}
+.qrCode_part ul {
+    position: absolute;
+    top:50px;
+    left: 23px;
+    height: 406px;
+    width: 800px;
+}
+.qrCode_part li {
+    float: left;
+    position: relative;
+    width: 298px;
+    height: 406px;
+    margin: 0 38px;
+}
+.qrCode_part .qrCode_img {
+    width: 298px;
+    height: 298px;
+    background: #ffffff;
+}
+.qrCode_part .qrCode_desc {
+    position: absolute;
+    width: 298px;
+    height: 94px;
+    bottom: 0;
+    background: url("../images/qr_desc.png") no-repeat;
+    background-size: 100% 100%;
+}
+.qrCode_part .qrCode_desc p {
+    position: absolute;
+    bottom:16px;
+    left: 82px;
+    width: 190px;
+    height: 48px;
+    font-size: 18px;
+    color: #A2A2A2;
+}
+.qrCode_desc .alipay {
+    color: #00A2EA;
+}
+.qrCode_desc .weixin {
+    color: #00C800;
+}
+
+/*
+* 关联手机号支付区域
+*/
+.relate_phone {
+    position: relative;
+    width: 794px;
+    height: 340px;
+}
+.relate_phone_submit {
+    position: absolute;
+    top:46px;
+    left: 53px;
+    width: 683px;
+    height: 95px;
+}
+.relate_phone_submit::before {
+    content: '';
+    position: absolute;
+    width: 683px;
+    height: 93px;
+    top:0;
+    left: 0;
+    border-bottom: 1px solid #FFFFFF;
+    opacity: 0.2;
+}
+.relate_phone_submit p {
+    height: 22px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+.relate_phone_submit .phone {
+    font-size: 28px;
+    color: #00B7EE;
+}
+.relate_phone_submit .submit {
+    position: absolute;
+    top:2px;
+    left: 380px;
+    width: 253px;
+    height: 53px;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 53px;
+}
+.relate_phone_submit .submit span {
+    opacity: 0.3;
+}
+.relate_phone_submit .submit::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 253px;
+    height: 53px;
+    background: #E6E6E6 ;
+    opacity: 0.2;
+    border-radius: 6px;
+    z-index: -10;
+}
+.relate_phone_submit .submit.focus span {
+    opacity: 1;
+}
+.relate_phone_submit .focus::before{
+    content: '';
+    position: absolute;
+    top:-1px;
+    left: -1px;
+    width: 253px;
+    height: 53px;
+    border-radius: 6px;
+    z-index: -1;
+    background: #009DFF;
+    opacity: 0.8;
+}
+.relate_phone_submit .focus::after{
+    content: '';
+    position: absolute;
+    top:-25px;
+    left: -25px;
+    width: 300px;
+    height: 104px;
+    background: url("../images/payTypeFocus.png") no-repeat;
+}
+
+.relate_phone .relate_phone_input {
+    position: absolute;
+    top:141px;
+    left: 0px;
+    padding: 33px 53px;
+
+}
+.no_lock_desc {
+    width: 688px;
+    height: 64px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    font-size: 21px;
+    word-break: break-all;
+    line-height: 32px;
+}
+.lock_desc {
+    width: 549px;
+    height: 64px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    font-size: 21px;
+    word-break: break-all;
+    line-height: 32px;
+}
+.relate_phone_input_area {
+    position: relative;
+    width: 688px;
+    height: 55px;
+    margin-bottom: 33px;
+}
+.relate_phone_input_area div {
+    float: left;
+    position: relative;
+}
+.relate_phone_input_area .input {
+    width: 334px;
+    height: 53px;
+    margin-right: 20px;
+    padding: 0 13px;
+    letter-spacing: 0.78px;
+    font-size: 24px;
+    color: #E6E6E6;
+    line-height: 53px;
+}
+.relate_phone_input_area .input span {
+    opacity: 0.5;
+    letter-spacing: 0.78px;
+    color: #E6E6E6;
+}
+.relate_phone_input_area .input::before{
+    position: absolute;
+    content: '';
+    width: 360px;
+    height: 53px;
+    top:0;
+    left: 0;
+    background: #FFFFFF;
+    opacity: 0.1;
+    border-radius: 6px;
+}
+.relate_phone_input_area .input.focus::after{
+    position: absolute;
+    content: '';
+    /*width: 358px;
+    height: 51px;
+    top:0;
+    left: 0;
+    border: solid 2px #FFFFFF;
+    box-shadow: 0 0 25px 10px rgba(0,157,255,0.80);
+    border-radius: 6px;*/
+    width: 409px;
+    height: 109px;
+    top:-25px;
+    left: -25px;
+    background: url("../images/inputFocus.png") no-repeat;
+}
+.relate_phone_input_area .button {
+    width: 169px;
+    height: 53px;
+    opacity: 1;
+    font-size: 25px;
+    color: #E6E6E6;
+    line-height: 53px;
+    text-align: center;
+}
+.relate_phone_input_area .button span {
+    color: #E6E6E6;
+}
+.relate_phone_input_area .button::before{
+    position: absolute;
+    content: '';
+    width: 169px;
+    height: 53px;
+    top:0;
+    left: 0;
+    background: #FFFFFF;
+    opacity: 0.1;
+    border-radius: 6px;
+}
+.relate_phone_input_area .button.focus::before{
+    position: absolute;
+    content: '';
+    width: 169px;
+    height: 53px;
+    top:0;
+    left: 0;
+    background: #009DFF;
+    opacity: 0.8;
+    border-radius: 6px;
+    z-index: -1;
+}
+.relate_phone_input_area .button.focus::after{
+    position: absolute;
+    content: '';
+    /*width: 167px;
+    height: 51px;
+    top:0;
+    left: 0;
+    border: solid 2px #FFFFFF;
+    box-shadow: 0 0 25px 10px rgba(0,157,255,0.80);
+    border-radius: 6px;*/
+    width: 223px;
+    height: 109px;
+    top:-28px;
+    left: -27px;
+    background: url("../images/buttonFocus.png") no-repeat;
+    background-size: 100% 100%;
+}
+.relate_phone_input_area .relate_phone_error_tips {
+    position: absolute;
+    font-size: 18px;
+    color: #F3363D;
+    bottom: -30px;
+    width: 688px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+/*未开通统一支付的提示*/
+.relate_phone_qrCode {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+.relate_phone_qrCode_left {
+    position: absolute;
+    top:46px;
+    left: 53px;
+    width: 322px;
+    height: 320px;
+    word-break: break-all;
+    font-size: 21px;
+    line-height: 34px;
+    color: #FFFFFF;
+}
+.relate_phone_qrCode_right {
+    position: absolute;
+    top:46px;
+    left: 426px;
+    width: 313px;
+    height: 417px;
+}
+.relate_phone_qrCode_right .qrCode_img {
+    width: 300px;
+    height: 300px;
+    background: white;
+    padding: 6px;
+}
+.relate_phone_qrCode_right .qrCode_img img {
+    width: 100%;
+}
+.relate_phone_qrCode_right .qrCode_desc {
+    position: absolute;
+    width: 312px;
+    height: 96px;
+    bottom: 0;
+    background: url("../images/qr_desc.png") no-repeat;
+    background-size: 100% 100%;
+}
+.relate_phone_qrCode_right .qrCode_desc p {
+    position: absolute;
+    bottom:16px;
+    left: 90px;
+    width: 190px;
+    height: 48px;
+    font-size: 18px;
+    color: #A2A2A2;
+}
+/*
+* 其他手机号输入框
+*/
+.other_phone {
+    position: relative;
+    width: 600px;
+    height: 240px;
+}
+.other_phone_ul {
+    position: absolute;
+    width: 600px;
+    top:46px;
+    left: 53px;
+}
+.other_phone_ul li {
+    position: relative;
+    width: 550px;
+    height: 53px;
+    margin-bottom: 20px;
+}
+
+.other_phone_ul div {
+    float: left;
+    position: relative;
+    opacity: 1;
+    color: #E6E6E6;
+    line-height: 53px;
+    font-size: 24px;
+}
+.other_phone_ul .input {
+    width: 334px;
+    height: 53px;
+    margin-right: 20px;
+    padding: 0 13px;
+    letter-spacing: 0.78px;
+}
+.other_phone_ul .input span {
+    opacity: 0.5;
+    letter-spacing: 0.78px;
+    color: #E6E6E6;
+}
+.other_phone_ul .input::before{
+    position: absolute;
+    content: '';
+    width: 360px;
+    height: 53px;
+    top:0;
+    left: 0;
+    background: #FFFFFF;
+    opacity: 0.1;
+    border-radius: 6px;
+}
+.other_phone_ul .input.focus::after{
+    position: absolute;
+    content: '';
+   /* width: 358px;
+    height: 51px;
+    top:0;
+    left: 0;
+    border: solid 2px #FFFFFF;
+    box-shadow: 0 0 25px 10px rgba(0,157,255,0.80);
+    border-radius: 6px;*/
+    width: 409px;
+    height: 109px;
+    top:-25px;
+    left: -25px;
+    background: url("../images/inputFocus.png") no-repeat;
+}
+.other_phone_ul .button {
+    width: 169px;
+    height: 53px;
+    opacity: 1;
+    font-size: 25px;
+    color: #E6E6E6;
+    line-height: 53px;
+    text-align: center;
+}
+.other_phone_ul .button span {
+    color: #E6E6E6;
+}
+.other_phone_ul .button::before{
+    position: absolute;
+    content: '';
+    width: 169px;
+    height: 53px;
+    top:0;
+    left: 0;
+    background: #FFFFFF;
+    opacity: 0.1;
+    border-radius: 6px;
+}
+.other_phone_ul .button.focus::before{
+    position: absolute;
+    content: '';
+    width: 169px;
+    height: 53px;
+    top:0;
+    left: 0;
+    background: #009DFF;
+    opacity: 0.8;
+    border-radius: 6px;
+    z-index: -1;
+}
+.other_phone_ul .button.focus::after{
+    position: absolute;
+    content: '';
+    /*width: 167px;
+    height: 51px;
+    top:0;
+    left: 0;
+    border: solid 2px #FFFFFF;
+    box-shadow: 0 0 25px 10px rgba(0,157,255,0.80);
+    border-radius: 6px;*/
+    width: 223px;
+    height: 112px;
+    top:-30px;
+    left: -27px;
+    background: url("../images/buttonFocus.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.other_phone_ul .other_phone_tips {
+    opacity: 0.9;
+    font-size: 19px;
+    line-height: 19px;
+    color: #F3363D;
+    letter-spacing: 0;
+}
+
+/*
+* 数字键盘
+*/
+.keyBorder {
+    position: relative;
+    padding-left: 43px;
+}
+.keyBorder_ul {
+    width: 470px;
+    height: 160px;
+}
+.keyBorder_ul li {
+    float: left;
+    position: relative;
+    width: 55px;
+    height: 55px;
+    margin: 7px 10px;
+    color: #E6E6E6;
+    opacity: 0.8;
+    font-size: 28px;
+    line-height: 55px;
+    text-align: center;
+}
+.keyBorder_ul .word {
+    font-size: 17px;
+}
+.keyBorder_ul li::before {
+    content: '';
+    position: absolute;
+    width: 55px;
+    height:55px;
+    top:0;
+    left: 0;
+    border-radius: 5px;
+    background: #FFFFFF;
+    opacity: 0.1;
+}
+.keyBorder_ul .focus::after {
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 0px;
+    width: 53px;
+    height: 53px;
+    border: solid 2px white;
+    box-shadow: 0 0 25px 10px rgba(0,157,255,0.80);
+    border-radius: 6px;
+}
+
+/*
+* 浮层弹窗提示
+*/
+.center_tips {
+    position: absolute;
+    top:193px;
+    left: 240px;
+    width: 800px;
+    height: 300px;
+    z-index: 100;
+}
+.center_tips::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 800px;
+    height: 300px;
+    background: #000000;
+    opacity: 0.85;
+    border-radius: 10px;
+    z-index: -100;
+}
+.tips_title {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 80px;
+    color: #E6E6E6;
+    font-size: 28px;
+    line-height: 80px;
+}
+.tips_title::after {
+    content: '';
+    position: absolute;
+    width: 800px;
+    height: 3px;
+    background: #FC5C64;
+    opacity: 0.9;
+    top:80px;
+    left: 0;
+}
+.tips_title_success {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 80px;
+    color: #E6E6E6;
+    font-size: 28px;
+    line-height: 80px;
+}
+.tips_title_success::after {
+    content: '';
+    position: absolute;
+    width: 800px;
+    height: 3px;
+    background: #8FD541;
+    opacity: 0.9;
+    top:80px;
+    left: 0;
+}
+.tips_title img {
+    width: 40px;
+    margin: 20px 20px 20px 40px;
+}
+.tips_title_success img {
+    width: 40px;
+    margin: 20px 20px 20px 40px;
+}
+.tips_desc {
+    position: absolute;
+    width: 600px;
+    top: 110px;
+    left: 100px;
+    color: #FFFFFF;
+    font-size: 28px;
+    line-height: 28px;
+}
+.tips_button {
+    position: absolute;
+    top:218px;
+    left: 310px;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 176px;
+    height: 52px;
+    line-height: 56px;
+    border: solid 2px #FFFFFF;
+    box-shadow: 0 0 25px 10px rgba(0,157,255,0.80);
+    border-radius: 10px;;
+}
+.tips_button::after {
+    content: '';
+    position: absolute;
+    top:-2px;
+    left: -2px;
+    width: 180px;
+    height: 56px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px 10px rgba(0,157,255,0.80);
+}
+
+/*
+* 产品包选择列表
+**/
+.package {
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 1280px;
+    height: 720px;
+}
+.package .package_title {
+    position: absolute;
+    top:53px;
+    left: 96px;
+    color: #FFFFFF;
+    font-size: 31px;
+}
+.package .package_head {
+    width: 326px;
+    height: /*107*/124px;
+   /* display: table-cell;
+    vertical-align: middle;
+    text-align: center;*/
+}
+.package .package_head img {
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 64px;
+}
+.package_head .package_head_h1 {
+    font-size: 32px;
+    color: #FFFFFF;
+}
+.package_head .package_head_h2 {
+    font-size: 19px;
+    color: #FFFFFF;
+}
+.package .package_list {
+    position: absolute;
+    top:89px;
+    left: 90px;
+    width: 1100px;
+    height: 490px;
+    overflow: hidden;
+}
+.package .package_list .package_ul {
+    position: relative;
+    margin-top: 20px;
+    width: 4000px;
+    height: 450px;
+}
+.package .package_ul li {
+    position: relative;
+    float: left;
+    margin: 0 20px;
+    width: 326px;
+    height: 450px;
+    background: url("../images/movie_vip.png") no-repeat;
+    background-size: 100%;
+}
+.package .package_ul .focus::before {
+    content: '';
+    position: absolute;
+    top:-2px;
+    left: -2px;
+    width: 326px;
+    height: 450px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 0 16px 10px rgba(0,157,255,0.80);
+    border-radius: 6px;
+}
+.package .package_ul .package_content {
+    position: absolute;
+    top:127px;
+    width: 288px;
+    height: 240px;
+    padding: 0 19px;
+    overflow: hidden;
+}
+.package_content p {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+    word-break: break-all;
+    line-height: 24px;
+}
+.package_content .package_content_h {
+    opacity: 0.7;
+    font-family: PingFangSC-Medium;
+    font-size: 19px;
+    line-height: 19px;
+    color: #E2E2E2;
+    margin-bottom: 10px;
+}
+.package_list .package_bottom {
+    position: absolute;
+    top:369px;
+    height: 48px;
+    line-height: 48px;
+    color: #FFB200;
+    width: 288px;
+    padding: 0 19px;
+    text-align: center;
+}
+.package_list .package_bottom span {
+    font-size: 22px;
+}
+.package_list .package_bottom em {
+    font-size: 48px;
+}
+
+.package .arrow {
+    position: absolute;
+    top:321px;
+    left: 40px;
+    width: 1200px;
+    height: 26.4px;
+}
+.package .arrow .arrow_left {
+    width: 26.4px;
+    height: 26.4px;
+    background: url("../images/icon/left.png") no-repeat;
+    float: left;
+}
+.package .arrow .arrow_right {
+    width: 26.4px;
+    height: 26.4px;
+    background: url("../images/icon/right.png") no-repeat;
+    float: right;
+}
+.package .package_advs {
+    position: absolute;
+    top:580px;
+    left: 110px;
+    width: 1060px;
+    height: 100px;
+}
