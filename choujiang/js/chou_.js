@@ -351,6 +351,11 @@ $(function () {
                     $(".image3").show();
                 }
                 break;
+                case 27:
+                    $(".gz").hide();
+                    $(".tk").hide();
+                    $(".tk1").hide();
+                break;
         }
         
         for (var i = 0; i <= list.length; i++) {
@@ -405,17 +410,17 @@ $(function () {
                 }
             }
         }
-        if (e.keyCode == "27") {
-            if ($(".gz").show()) {
-                $(".gz").hide();
-            }
-            if ($(".tk").show()) {
-                $(".tk").hide();
-            }
-            if ($(".tk1").show()) {
-                $(".tk1").hide();
-            }
-        }
+        // if (e.keyCode == "27") {
+        //     if ($(".gz").show()) {
+        //         $(".gz").hide();
+        //     }
+        //     if ($(".tk").show()) {
+        //         $(".tk").hide();
+        //     }
+        //     if ($(".tk1").show()) {
+        //         $(".tk1").hide();
+        //     }
+        // }
     }
     var getCli = function () {
         //判断是否投资然后是fou抽奖========================================================
