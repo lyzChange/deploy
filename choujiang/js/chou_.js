@@ -368,6 +368,11 @@ $(function () {
                     if (datas.resultCode == "1004") {
                         $(".tk1").show();
                         console.log(1111111)
+                        if (i == 1) {
+                            $(".gz").show();
+    
+                            console.log(22222)
+                        }
                     }
                     if (i == 2) {
                         if (datas.resultCode == "1002") {
@@ -402,11 +407,11 @@ $(function () {
                             }
                         }
                     }
-                    if (i == 1) {
-                        $(".gz").show();
+                    // if (i == 1) {
+                    //     $(".gz").show();
 
-                        console.log(22222)
-                    }
+                    //     console.log(22222)
+                    // }
                 }
             }
         }
