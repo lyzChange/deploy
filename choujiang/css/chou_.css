@@ -273,8 +273,8 @@ li > span:nth-child(2) {
        
 }
 .gz{
-    width:1280px;
-    height:720px;
+    width:1278px;
+    height:718px;
     display:none;
     position: absolute;
     z-index:2;
