@@ -273,11 +273,16 @@ li > span:nth-child(2) {
        
 }
 .gz{
-    width:1278px;
-    height:718px;
+    width:1280px;
+    height:720px;
     display:none;
     position: absolute;
     z-index:2;
+}
+.gz>span{
+    width:1280px;
+    height:720px;
+    display:block;
     background: #000;
     opacity: 0.9;
 }
@@ -291,8 +296,6 @@ li > span:nth-child(2) {
     overflow: auto;
 }
 #imgdf{
-    width:500px;
-    height:500px;
     margin-right:50px;
     position: relative;
     top:0;
