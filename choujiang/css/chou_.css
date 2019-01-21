@@ -278,11 +278,6 @@ li > span:nth-child(2) {
     display:none;
     position: absolute;
     z-index:2;
-}
-.gz>span{
-    width:1280px;
-    height:720px;
-    display:block;
     background: #000;
     opacity: 0.9;
 }
@@ -296,6 +291,8 @@ li > span:nth-child(2) {
     overflow: auto;
 }
 #imgdf{
+    width:700px;
+    height:1000px;
     margin-right:50px;
     position: relative;
     top:0;
