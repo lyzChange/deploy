@@ -281,13 +281,6 @@ li > span:nth-child(2) {
     background: #000;
     opacity: 0.9;
 }
-/* .gz>span{
-    width:1280px;
-    height:720px;
-    display:block;
-    background: #000;
-    opacity: 0.9;
-} */
 #gz-box{
     width:1043;
     height:480px;
