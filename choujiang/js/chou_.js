@@ -53,7 +53,7 @@ var get_bid = get_bi_id_();
 
 
 var datas = {
-    "resultCode": "1004",
+    "resultCode": "1002",
     "resultMsg": "成功",
     "content": {
         "flag": "0",
@@ -355,35 +355,30 @@ $(function () {
                     $(".gz").hide();
                     $(".tk").hide();
                     $(".tk1").hide();
+                   
                 break;
         }
         
         for (var i = 0; i <= list.length; i++) {
             if (i == now) {
                 if (e.keyCode == 13) {
-                    console.log(2222)
                     // $(".gz").css("display","block");
-                    
 
                     if (datas.resultCode == "1004") {
                         $(".tk1").show();
-                        console.log(1111111)
                         if (i == 1) {
                             $(".gz").show();
-    
                             console.log(22222)
                         }
                     }
                     if (i == 2) {
                         if (datas.resultCode == "1002") {
                             $(".tk").show();
+                            console.log(123213)
                             if ($(".tk").show()) {
-                                window.location.href = "pay_page.html"
-                                if (i == 0) {
-                                    window.location.href = "pay_page.html"
-                                    //点击跳转订购页面
-                                    console.log(132346)
-                                }
+                                console.log(6666666)
+                                // window.location.href = "pay_page.html"
+                                
                             }
                         } else if (datas.resultCode !== "1002") {
                             if (datas.content.flag == 0) {
@@ -407,11 +402,16 @@ $(function () {
                             }
                         }
                     }
-                    // if (i == 1) {
-                    //     $(".gz").show();
+                    if (i == 0) {
+                        window.location.href = "pay_page.html"
+                        //点击跳转订购页面
+                        console.log(132346)
+                    }
+                    if (i == 1) {
+                        $(".gz").show();
 
-                    //     console.log(22222)
-                    // }
+                        console.log(22222)
+                    }
                 }
             }
         }
