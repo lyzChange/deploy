@@ -291,8 +291,8 @@ li > span:nth-child(2) {
     overflow: auto;
 }
 #imgdf{
-    width:700px;
-    height:1140px;
+    width:500px;
+    height:500px;
     margin-right:50px;
     position: relative;
     top:0;
