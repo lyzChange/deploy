@@ -353,7 +353,7 @@ $(function () {
                 break;
         }
         
-        for (var i = 0; i < list.length; i++) {
+        for (var i = 0; i <= list.length; i++) {
             list[i].classList.remove();
             if (i == now) {
                 list[i].classList.add();
