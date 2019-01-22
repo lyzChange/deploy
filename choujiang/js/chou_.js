@@ -80,8 +80,10 @@ if(datas.resultCode == "0000"){
 		$(".image1").hide();
 	}else if(datas.content.flag=="1"){
 		console.log(222222)
-		str="<div>"+"恭喜您获得1次新年“猪”福，快来点击抽奖 哦！"+"</div>";
-		$(".user").append(str)
+        str="<div>"+"恭喜您获得1次新"+"</div>"
+        str1="<div class=gbp>"+"年“猪”福，快来点击抽奖 哦！"+"</div>";
+        $(".user").append(str)
+        $(".user").append(str1)
 		$(".image4").show();
 		$(".image3").hide();
 	}
