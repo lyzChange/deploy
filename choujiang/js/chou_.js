@@ -53,7 +53,7 @@ var get_bid = get_bi_id_();
 
 
 var datas = {
-    "resultCode": "1004",
+    "resultCode": "0000",
     "resultMsg": "成功",
     "content": {
         "flag": "1",
@@ -80,7 +80,7 @@ if(datas.resultCode == "0000"){
 		$(".image1").hide();
 	}else if(datas.content.flag=="1"){
 		console.log(222222)
-		str="<h2>"+"恭喜您获得1次新年“猪”福，快来点击抽奖 哦！"+"</h2>";
+		str="<div>"+"恭喜您获得1次新年“猪”福，快来点击抽奖 哦！"+"</div>";
 		$(".user").append(str)
 		$(".image4").show();
 		$(".image3").hide();
