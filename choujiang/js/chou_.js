@@ -103,9 +103,9 @@ if(datas.resultCode == "0000"){
 		$(".image3").hide();	
 }else if(datas.resultCode == "1004"){
 		str="<div>"+"您的宽带电视账户未"+"</div>";
-        str1="<div class=gbp>"+"办理统一支付，请详询"+"</div>";
-        str2="<div class=gbp>"+"10086或前往营业厅办"+"</div>";
-        str3="<div class=gbp>"+"理，办理成功后即可抽奖哦！"+"</div>";
+        str1="<div class=gbp>"+"办理统一支付，请详询10086"+"</div>";
+        str2="<div class=gbp>"+"或前往营业厅办理，办理"+"</div>";
+        str3="<div class=gbp>"+"成功后即可抽奖哦！"+"</div>";
         $(".user").append(str);
         $(".user").append(str1);
         $(".user").append(str2);
