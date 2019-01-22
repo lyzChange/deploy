@@ -388,7 +388,7 @@ li > span:nth-child(2) {
     left:116px;
 } */
 .user{
-    position: relative;
+    position: absolute;
      top: 30px;
      width: 275px;
      height: 360px;
