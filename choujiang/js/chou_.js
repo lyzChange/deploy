@@ -53,10 +53,10 @@ var get_bid = get_bi_id_();
 
 
 var datas = {
-    "resultCode": "0000",
+    "resultCode": "1002",
     "resultMsg": "成功",
     "content": {
-        "flag": "1",
+        "flag": "0",
         "mobile": "157****1030",
             "awardInfo":{
                 "awardName":"5.88元话费",
@@ -72,9 +72,10 @@ if(datas.resultCode == "0000"){
 	console.log(1111111)
 	if(datas.content.flag=="0"){
 		console.log(1111111)
-        str="<div>"+"太厉害啦！您已抽中"+"<div>";
-        str="<div>"+datas.content.awardInfo.awardName+"奖品"+"</div>"
-		$(".user").append(str)
+        str="<div>"+"太厉害啦！您已抽中"+"</div>";
+        str1="<div class=gbp>"+datas.content.awardInfo.awardName+"奖品"+"</div>"
+        $(".user").append(str)
+        $(".user").append(str1)
 		$(".image5").show();
 		$(".image3").hide();
 		$(".image2").show();
@@ -231,7 +232,7 @@ $(function () {
                 }
                 break;
             case 38://上
-                if (t <= 0) {
+                if (t <= -40) {
                     console.log(t);
                     box.style.top = t + 40 + "px";
                     console.log(t);
