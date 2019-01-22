@@ -281,13 +281,18 @@ li > span:nth-child(2) {
     background: #000;
     opacity: 0.9;
 }
-#gz-box{
-    width:1043;
-    height:1000px;
+.gz_bg{
+    height:480px;
+    width:1100px;
     position: absolute;
     top:130px;
     left:119px;
     overflow: hidden;
+}
+#gz-box{
+    width:1043;
+    height:1000px;
+    
     overflow: auto;
 }
 #imgdf{
