@@ -53,7 +53,7 @@ var get_bid = get_bi_id_();
 
 
 var datas = {
-    "resultCode": "1002",
+    "resultCode": "1004",
     "resultMsg": "成功",
     "content": {
         "flag": "1",
