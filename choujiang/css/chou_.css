@@ -388,7 +388,7 @@ li > span:nth-child(2) {
     left:116px;
 } */
 .user{
-    position: relative;
+    position: absolute;
     top: 30px;
     width: 275px;
     height: 360px;
@@ -427,6 +427,7 @@ li > span:nth-child(2) {
     line-height: 18px;
     text-indent: 2em;
     line-height: 30px;
+    white-space: normal;
  }
  .user>img{
      width: 210px;
