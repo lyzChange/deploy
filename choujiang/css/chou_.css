@@ -355,7 +355,7 @@ li > span:nth-child(2) {
 .image4{
     display:none;
 }
-.user>h1{
+/* .user>h1{
     width:275px;
     font-size: 24px;
     color: #F2CD77;
@@ -386,15 +386,54 @@ li > span:nth-child(2) {
     position: absolute;
     top:141px;
     left:116px;
-}
+} */
+.user{
+    position: relative;
+     top: 30px;
+     width: 275px;
+     height: 360px;
+     left: 89px; 
+ }
+ .user>h3{
+     width: 275px;
+     font-size: 24px;
+     color: #F2CD77;
+     position: absolute;
+     line-height: 1;
+     margin: 0 0;
+     text-align: center;
+ }
+ .user>span{
+     font-size: 18px;
+     color: #F2CD77;
+     line-height: 18px;
+     position: absolute;
+     top: 40px;
+     left: 20px;
+ }
+ .user>p{
+     font-size: 18px;
+     color: #F2CD77;
+     line-height: 18px;
+     position: absolute;
+     top: 46px;
+     left: 50px;
+ }
+ .user>img{
+     width: 210px;
+     height: 210px;
+     position: absolute;
+     top: 92px;
+     left: 26px;
+ }
 h2{
     width:275px;
     font-size: 24px;
     color: #F2CD77;
     line-height: 24px;
     position: absolute;
-    top:52px;
-    left:100px;
+    /* top:52px;
+    left:100px; */
     text-indent:2em;
     line-height:40px;
 }
@@ -426,18 +465,6 @@ h4{
     position: absolute;
     padding: 100px 63px
 }
-.tk>span{
-    width:140px;
-    background: #f9af30;
-    position: absolute;
-    text-align: center;
-    font-size:30px;
-    line-height:40px;
-    padding:10px 20px;
-    top:240px;
-    left:330px;
-    border-radius: 10px;
-}
 .tk1{
     width:800px;
     height:400px;
@@ -453,15 +480,17 @@ h4{
     position: absolute;
     padding: 100px 63px
 }
-.tk1>span{
-    width:140px;
+input{
+    width:174px;
     background: #f9af30;
     position: absolute;
     text-align: center;
     font-size:30px;
     line-height:40px;
     padding:10px 20px;
-    top:240px;
+    top:280px;
     left:330px;
     border-radius: 10px;
+    border:none;
+    color:#fff;
 }

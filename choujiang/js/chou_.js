@@ -87,7 +87,7 @@ if(datas.resultCode == "0000"){
 	}
 }else if(datas.resultCode == "1002"){
 		console.log(12222221)
-		str1="<h1>"+"您离抽奖还差一步"+"</h1>";
+		str1="<h3>"+"您离抽奖还差一步"+"</h3>";
 		str2="<span>"+"订购影视动漫VIP包 （39.9元)"+"</span>";
 		str3="<p>"+"立即参加幸运抽奖哦!"+"</p>"
 		str4="<img src='./images/cpb_img.png'>";
@@ -112,45 +112,19 @@ $(function () {
     var $btn = $('.zhuanzhou'); // 旋转的div
     var cishu = 1; //初始次数，由后台传入
     $('#cishu').html(cishu); //显示还剩下多少次抽奖机会
-    var isture = 0; //是否正在抽奖
-    var clickfunc = function () {
-        var data = [1, 2, 3, 4, 5, 6]; //抽奖
-        //data为随机出来的结果，根据概率后的结果
-        data = data[Math.floor(Math.random() * data.length)]; //1~6的随机数
-        switch (data) {
-            case 1:
-                rotateFunc(1, 60, '足球');
-                break;
-            case 2:
-                rotateFunc(2, 120, '移动电源');
-                break;
-            case 3:
-                rotateFunc(3, 180, '15.88元话费');
-                break;
-            case 4:
-                rotateFunc(4, 240, '1GB流量');
-                break;
-            case 5:
-                rotateFunc(5, 300, '8.88元话费');
-                break;
-            case 6:
-                rotateFunc(6, 360, '5.88元话费');
-                break;
-        }
-    }
     var flag = false;
     $(".anniu2").click(function () {
-        if (flag == false) {
-            var time = [0, 1];
-            time = time[Math.floor(Math.random() * time.length)];
-            if (time == 0) {
-                timeOut(); //网络超时
-            }
-            if (time == 1) {
+        // if (flag == false) {
+        //     var time = [0, 1];
+        //     time = time[Math.floor(Math.random() * time.length)];
+        //     if (time == 0) {
+                
+        //     }
+        //     if (time == 1) {
                 getCli();
-                flag = true;
-            }
-        }
+                // flag = true;
+        //     }
+        // }
     });
     var timeOut = function () {  //超时函数
         $btn.rotate({
@@ -173,33 +147,6 @@ $(function () {
             angle: 0, //旋转的角度数
             duration: 3000, //旋转时间
             animateTo: angle + 1440, //给定的角度,让它根据得出来的结果加上1440度旋转
-            callback: function () {
-                isture = false; // 标志为 执行完毕
-                if (text == "移动电源") {
-                    $(".texts").html("恭喜您获得：" + text);
-                    $(".texts2").html("我们将在48小时之内将奖品赠送至您宽带电视统一支付手机号码139XXXX2428中，请您关注查收!")
-                    $(".texts1").html("");
-                }
-                else if (text == "足球") {
-                    $(".texts").html("恭喜您获得：" + text);
-                    $(".texts2").html("我们将在48小时之内将奖品赠送至您宽带电视统一支付手机号码139XXXX2428中，请您关注查收!")
-                    $(".texts1").html("");
-                }
-                else {
-                    $(".texts").html("恭喜您获得：" + text);
-                    $(".texts2").html("");
-                    $(".texts1").html("我们将在七个工作日内与您宽带电视统一支付手机号码139XXX2428联系，请您保持手机畅通")
-                }
-
-                $(".jl-tk").show();
-                $(".cjgz-c").on('click', function () {
-                    $(".jl-tk").hide();
-                });
-                $(".ok-img").on('click', function () {
-                    $(".jl-tk").hide();
-                    $(".wcs").hide();
-                });
-            }
         });
     };
     var list = $(".an");
@@ -358,83 +305,69 @@ $(function () {
                    
                 break;
         }
-        
         for (var i = 0; i <= list.length; i++) {
             if (i == now) {
                 if (e.keyCode == 13) {
-                    // $(".gz").css("display","block");
-
-                    if (datas.resultCode == "1004") {
-                        $(".tk1").show();
-                        if (i == 1) {
-                            $(".gz").show();
-                            console.log(22222)
-                        }
-                    }
                     if (i == 2) {
-                        if (datas.resultCode == "1002") {
-                            $(".tk").show();
-                            console.log(123213)
-                            if ($(".tk").show()) {
-                                console.log(6666666)
-                                // window.location.href = "pay_page.html"
-                                
-                            }
-                        } else if (datas.resultCode !== "1002") {
-                            if (datas.content.flag == 0) {
-                            } else if (datas.content.flag == 1) {
-                                $(".anniu2").click();
-                            }
-                        }
-                        if ($(".jl-tk").show(), $(".wcs").show()) {
-                            $(".jl-tk").hide();
-                            $(".wcs").hide();
-                        }
-                        console.log(11111)
-                        if (datas.resultCode == "0000") {
-                            if (datas.content.flag == 1) {
+                        if (datas.resultCode == "0000") { //
+                            if (datas.content.flag == 1) {//有一次抽奖次数
                                 console.log(2222)
                                 $(".anniu2").click();
                                 if ($(".jl-tk").show(), $(".wcs").show()) {
                                     $(".jl-tk").hide();
                                     $(".wcs").hide();
                                 }
+                            }else {//不可抽奖-
+                            }
+                        }
+                        if (datas.resultCode == "1002") { //
+                            $(".tk").show();
+                            key_en()
+                        
+                        } 
+                        if ($(".jl-tk").show(), $(".wcs").show()) {
+                            $(".jl-tk").hide();
+                            $(".wcs").hide();
+                        }
+                        if (datas.resultCode == "1004") {//提示统一支付
+                            $(".tk1").show();
+                            if (i == 1) {
+                                $(".gz").show();
+                                console.log(22222)
                             }
                         }
                     }
-                    if (i == 0) { //立即 订购
-                        window.location.href = "pay_page.html"
-                        //点击跳转订购页面
-                        console.log(132346)
-                    }
-                    if (i == 1) { //规则
+                    if (i == 1) {
                         $(".gz").show();
-
                         console.log(22222)
                     }
                 }
             }
         }
-        // if (e.keyCode == "27") {
-        //     if ($(".gz").show()) {
-        //         $(".gz").hide();
-        //     }
-        //     if ($(".tk").show()) {
-        //         $(".tk").hide();
-        //     }
-        //     if ($(".tk1").show()) {
-        //         $(".tk1").hide();
-        //     }
-        // }
     }
+    //弹框 立即订购
+    function key_en(){
+        document.onkeydown = undefined;
+        $('#ssd').focus()
+
+    }
+
+    $('#ssd').keydown(function (e) {
+        switch (e.keyCode) {
+            case 13://跳转订购页面
+                window.location = "pay_page.html"
+            break;
+        }
+    })
+    
+    
     var getCli = function () {
         //判断是否投资然后是fou抽奖========================================================
         
         var ajax = new Ajax();
-        var ajaxUrl= get_userTVWLottery+"?uuid="+123+"&billId="+getBillId+ '=';
+        var ajaxUrl= get_userTVWLottery+"?uuid="+123+"&billId="+'dnpzcHQwMDEyMDMxMTI=';
         ajax.get(ajaxUrl, function (data) {
-            console.log(data);
-            data = JSON.parse(data);
+            data = JSON.parse(data);console.log(data)
             var datas = ['足球','移动电源','15.88元话费','1GB国内流量','8.88元话费','5.88元话费']
                 var datas_rotat = [60,120,180,240,300,360]
                 if(data.resultMsg=='成功'){
@@ -443,51 +376,46 @@ $(function () {
                         if(datas[i]==data.content.awardInfo.awardName){
                             rotateFunc(1, datas_rotat[i], data.content.awardInfo.awardName);
                         };
-                    }
+                     }
+
+                    
+                    
+                    $(".image4").show();    
+                    $(".image3").hide();
+              
+               
+                    var t = setInterval(function () {
+                        //奖品提示
+                        if (data.content.awardInfo.awardName == "移动电源") {
+                            $(".texts").html("恭喜您获得：" + data.content.awardInfo.awardName);
+                            $(".texts2").html('我们将在48小时之内将奖品赠送至您宽带电视统一支付手机号码'+data.content.mobile+'中，请您关注查收!')
+                            $(".texts1").html("");
+                            }
+                        else if (data.content.awardInfo.awardName == "足球") {
+                            $(".texts").html("恭喜您获得：" + data.content.awardInfo.awardName);
+                            $(".texts2").html("我们将在48小时之内将奖品赠送至您宽带电视统一支付手机号码中，请您关注查收!")
+                            $(".texts1").html("");
+                        }
+                        else {
+                            $(".texts").html("恭喜您获得：" + data.content.awardInfo.awardName);
+                            $(".texts2").html("");
+                            $(".texts1").html("我们将在七个工作日内与您宽带电视统一支付手机号码"+data.content.mobile+"联系，请您保持手机畅通")
+                        }
+                        $(".jl-tk").show();
+
+
+                        $(".image4").hide();
+                        $(".image5").show();
+                        clearInterval(t);
+                        isture = false;
+                    }, 3100)
                 }else{
                     $(".wcs").show();
-                }
-                
-                datas = data
-                console.log(datas);
-        });
-       
-        var touzi = "没投资11";
-        if (touzi == "没投资") {
-            $(".ok-img").on('click', function () {
-                // $(".zz").hide();
-                // $(".today").hide();
-                $(".wcs").hide();
+                }  
+                // timeOut(); //网络超时
+                    datas = data.content.mobile
+                    console.log(datas);
             });
-        } else {
-            if (isture) return; // 如果在执行就退出
-            isture = true; // 标志为 在执行
-            if (cishu <= 0) { //当抽奖次数为0的时候执行
-                $(".wcs").show();
-                $(".ok-img").on('click', function () {
-                    $(".wcs").hide();
-                });
-                alert("没有次数了");
-                $('#cishu').html(0); //次数显示为0
-                isture = false;
-            } else { //还有次数就执行
-                cishu = cishu - 1; //执行转盘了则次数减1
-                if (cishu <= 0) {
-                    cishu = 0;
-                }
-                $('#cishu').html(cishu);
-                clickfunc();
-
-                $(".image4").show();
-                $(".image3").hide();
-                var t = setInterval(function () {
-                    $(".image4").hide();
-                    $(".image5").show();
-                    clearInterval(t);
-                    isture = false;
-                }, 3000)
-            }
-        }
     }
 });
 
@@ -497,7 +425,7 @@ var ajaxUrl= Get_tVWBroadcast+"?uuid="+123;
 ajax.get(ajaxUrl, function (data) {
     data = JSON.parse(data);
     data = data;
-    console.log(data);
+    // console.log(data);
     var str = "<dl>";
     $.each(data.content.broadList, function (i) {
         str += "<dt>" + data.content.broadList[i].obtainTime + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + data.content.broadList[i].mobile + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + data.content.broadList[i].awardName + "</dt>";
@@ -519,3 +447,5 @@ $(function () {
         });
     }, 3000);
 });
+
+
