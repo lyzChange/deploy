@@ -53,10 +53,10 @@ var get_bid = get_bi_id_();
 
 
 var datas = {
-    "resultCode": "0000",
+    "resultCode": "1004",
     "resultMsg": "成功",
     "content": {
-        "flag": "1",
+        "flag": "0",
         "mobile": "157****1030",
             "awardInfo":{
                 "awardName":"5.88元话费",
@@ -72,7 +72,8 @@ if(datas.resultCode == "0000"){
 	console.log(1111111)
 	if(datas.content.flag=="0"){
 		console.log(1111111)
-		str="<h2>"+"太厉害啦！您已抽中"+datas.content.awardInfo.awardName+"奖品"+"<h2>";
+        str="<div>"+"太厉害啦！您已抽中"+"<div>";
+        str="<div>"+datas.content.awardInfo.awardName+"奖品"+"</div>"
 		$(".user").append(str)
 		$(".image5").show();
 		$(".image3").hide();
@@ -80,8 +81,8 @@ if(datas.resultCode == "0000"){
 		$(".image1").hide();
 	}else if(datas.content.flag=="1"){
 		console.log(222222)
-        str="<div>"+"恭喜您获得1次新"+"</div>"
-        str1="<div class=gbp>"+"年“猪”福，快来点击抽奖 哦！"+"</div>";
+        str="<div>"+"恭喜您获得1次新年"+"</div>"
+        str1="<div class=gbp>"+"“猪”福，快来点击抽奖 哦！"+"</div>";
         $(".user").append(str)
         $(".user").append(str1)
 		$(".image4").show();
@@ -101,11 +102,16 @@ if(datas.resultCode == "0000"){
 		$(".image4").show();
 		$(".image3").hide();	
 }else if(datas.resultCode == "1004"){
-		str="<div>"+"您的宽带电视账户未办理统一支付，请详询 10086或前往营业厅办理，办理成功后即可抽奖哦！"+"</div>";
-		$(".user").append(str);
+		str="<div>"+"您的宽带电视账户未"+"</div>";
+        str1="<div class=gbp>"+"办理统一支付，请详询"+"</div>";
+        str2="<div class=gbp>"+"10086或前往营业厅办"+"</div>";
+        str3="<div class=gbp>"+"理，办理成功后即可抽奖哦！"+"</div>";
+        $(".user").append(str);
+        $(".user").append(str1);
+        $(".user").append(str2);
+        $(".user").append(str3);
 		$(".image5").hide();
         $(".image4").show();
-        
 		$(".image3").hide();	
 	}
 
