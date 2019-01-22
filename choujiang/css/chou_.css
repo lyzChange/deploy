@@ -401,7 +401,8 @@ li > span:nth-child(2) {
      position: absolute;
      line-height: 1;
      margin: 0 0;
-     text-align: center;
+     text-indent:2em;
+     line-height:40px;
  }
  .user>span{
      font-size: 18px;
@@ -426,7 +427,7 @@ li > span:nth-child(2) {
      top: 92px;
      left: 26px;
  }
-h2{
+ .user>h2{
     /* width:275px; */
     font-size: 24px;
     color: #F2CD77;
