@@ -420,6 +420,14 @@ li > span:nth-child(2) {
      top: 46px;
      left: 50px;
  }
+ .user>div{
+    font-size: 24px;
+    color: #F2CD77;
+    line-height: 18px;
+    position: absolute;
+    text-indent: 2em;
+    line-height: 30px;
+ }
  .user>img{
      width: 210px;
      height: 210px;

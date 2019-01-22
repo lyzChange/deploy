@@ -99,7 +99,7 @@ if(datas.resultCode == "0000"){
 		$(".image4").show();
 		$(".image3").hide();	
 }else if(datas.resultCode == "1004"){
-		str="<h3>"+"您的宽带电视账户未办理统一支付，请详询 10086或前往营业厅办理，办理成功后即可抽奖哦！"+"</h3>";
+		str="<div>"+"您的宽带电视账户未办理统一支付，请详询 10086或前往营业厅办理，办理成功后即可抽奖哦！"+"</div>";
 		$(".user").append(str);
 		$(".image5").hide();
         $(".image4").show();
