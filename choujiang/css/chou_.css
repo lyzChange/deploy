@@ -421,6 +421,7 @@ li > span:nth-child(2) {
      left: 50px;
  }
  .user>div{
+    width:120px;
     font-size: 24px;
     color: #F2CD77;
     line-height: 18px;
