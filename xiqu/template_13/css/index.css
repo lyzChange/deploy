@@ -1,0 +1,53 @@
+/*global*/
+body,ul,ol,li,form,h1,h2,h3,h4,p{font-size:20px; color:#fff; font-family:Arial,tahoma,sans-serif; margin:0;padding:0;}
+a{text-decoration:none;}
+ul,ol{list-style:none;}
+img{border:none;}
+.main{ width:1280px; height:720px; background-size:contain;}
+.list{ width:240px; height:720px; float:left;  background:url(../images/left-bg.png) 0 0 repeat}
+.list-box{position:relative; width:260px; height:504px; overflow-y:hidden; margin-top:102px;}
+.list-box ul{ position:absolute; z-index:99; width:240px; -webkit-transition:top 0.2s linear;}
+
+.list-box ul li.li{ width:240px; min-height:84px; line-height:84px; position:relative; text-align:center;}
+.list-box ul li.li .pic{ display:block; position:absolute; z-index:0; left:20px; top:18px; width:200px;}
+.list-box ul li.li .curpic{ display:none;}
+.list-box ul li.li p.text{ position:relative; color:#2D5F00; font-size:24px;}
+.list-box ul li.over .pic{ display:none;}
+.list-box ul li.over .curpic{ display:block; position:absolute; z-index:0; left:20px; top:16px; width:225px;}
+.list-box ul li.over p.text{ color:#fff;}
+.list-box ul li.cur p.text{}
+.list-box ul li.li ol.sub-list{ height:0px; overflow:hidden;}
+.list-box ul li.cur ol.sub-list{height:auto; overflow:hidden;}
+.sub-list{overflow:hidden; height:0px;}
+.sub-list li.subli{ height:50px; line-height:50px; letter-spacing:2px; color:#2d5f00; font-size:22px; position:relative;}
+.sub-list li.subli .subtext{ position:relative; z-index:99; color:#fff;}
+.sub-list li.subli .subpic{ position:absolute; display:block; z-index:0; width:170px; left:34px; top:4px;}
+.sub-list li.subli .cursubpic{ position:absolute; display:none; z-index:0; width:190px; left:34px; top:4px; }
+
+
+
+.sub-list li.sub-cur .subpic{ display:none;}
+.sub-list li.sub-cur .cursubpic{ display:block;}
+.sub-list li.sub-over .subpic{ display:block;}
+.sub-list li.sub-over .cursubpic{ display:none;}
+
+.main-box{ float:left; overflow:hidden; width:925px; height:508px; margin:108px 0px 0px 27px;  position:relative;}
+.main-ul{ position:absolute; left:5px; height:1028px;}
+.main-ul .one-page{ width:927px; height:508px;}
+.main-ul .main-li{ width:160px; height:230px; float:left; overflow:hidden; margin:12px; position:relative; border-radius:2px;}
+.main-ul .main-li img.pic{ width:160px; height:230px; background:url(../images/bgm.png) no-repeat 0px 0px; border-radius:2px;}
+.main-ul .main-li .name{ width:160px;background:url(../images/bg-b.png) repeat 0px 0px; height:40px; line-height:40px; overflow:hidden; text-align:center; position:absolute; left:0px; bottom:0px;}
+.main-ul .main-li .name p{font-size:22px; height:50px; position:relative; text-align:center;  overflow:hidden; top:0px; left:10px; width:140px;}
+.main-ul .main-li .name p span{ position:absolute; left:0px; top:0px; color:#CDCBC8; white-space:nowrap;text-align:center; width:100%;}
+.main-ul .cur{-webkit-transform:scale(1.01,1.01);-webkit-border-radius:4px;border:2px solid #fff; margin:10px;  -webkit-box-shadow:rgba(0,156,255,0.6) 0px 0px 12px 4px;-webkit-transition:-webkit-transform 0.05s linear;}
+.title{ height:90px; line-height:90px; color:#003F4C; position:absolute; left:286px; top:40px; overflow:hidden; font-size:25px; letter-spacing:2px;}
+.title span{ font-size:23px;}
+.page{ width:500px; height:40px;color:#003F4C;font-size:23px; line-height:40px; text-align:center; position:absolute; top:635px; left:485px;}
+.page span{ display:inline-block;}
+.load{width:1280px; height:720px; position:absolute; left:0px; top:0px; z-index:30;}
+.load-out{ width:128px; height:128px; position:absolute; top:296px; left:576px; background:url(../images/loading_out.png) center center no-repeat; -webkit-animation:loading 2s infinite linear;}
+@-webkit-keyframes loading {0%{-webkit-transform:rotate(0deg);}100%{-webkit-transform: rotate(360deg);}}
+.load-in{ width:128px; height:128px; position:absolute; top:296px; left:576px; background:url(../images/loading_in.png) center center no-repeat;}
+.load-in2{ width:128px; height:128px; position:absolute; top:296px; left:576px; background:url(../images/loading_in_p.png) center center no-repeat;}
+.nolist{width:927px; height:566px; margin-top:566px; overflow:hidden;}
+.nolist div{ height:82px; line-height:82px; background:url(../images/rmb.png) 0px 0px no-repeat; padding-left:120px; font-size:40px; width:400px; margin:170px 0px 0px 300px; color:#A4A09B;}
