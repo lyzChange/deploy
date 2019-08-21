@@ -1,0 +1,54 @@
+$(function(){
+	$('.pay_money').hide();
+	$('.property').show();
+	$('#type').change(function(){
+		var type = $(this).val();
+		$('.pay_money').hide();
+		$('.'+type).show();
+		if(type!='property'){
+			$('.property_desc').html('');
+			$('#property option:first').attr('selected','selected');
+		}
+		if(type=='custom'){
+			$('#custom_name').show()
+		}else{
+			$('#custom_name').hide()
+		}
+	});
+    var start_time,end_time
+		$('.btn-info').click(function(){
+      start_time = $("input[name=start_time]").val()
+      end_time = $("input[name=end_time]").val()
+      console.log(start_time)
+      console.log(end_time)
+      // starta_time = $("input[name=starta_time]").val()
+      // enda_time = $("input[name=enda_time]").val()
+      // starts_time = $("input[name=starts_time]").val()
+      // ends_time = $("input[name=ends_time]").val()
+      //  console.log(starta_time)
+      //  console.log(enda_time)
+      //  console.log(starts_time)
+      //  console.log(ends_time)
+			var ajax_user_list_url = "{maycms{:U('ajax_user_list')}";
+			$.post(ajax_user_list_url,{usernum:usernum,start_time:start_time,end_time:end_time},function(data){
+				var shtml = '';
+				if(data.status){
+					$('.user_list').show();
+					for(var i in data['user_list']){
+						var data_ = data['user_list'][i];
+						console.log(data_)
+						shtml += '<span class="red">编号：' + data['user_list'][i]['usernum'] + '&nbsp;&nbsp;|&nbsp;&nbsp;业主姓名：'+data['user_list'][i]['name']+'&nbsp;&nbsp;|&nbsp;&nbsp;地址：' + data['user_list'][i]['address'] + '</span><br />';
+						$('input[name="electric_price"]').val(data_.electric_price)
+						$('input[name="water_price"]').val(data_.water_price)
+						$('input[name="gas_price"]').val(data_.gas_price)
+						$('input[name="park_price"]').val(data_.park_price)
+            $('input[name="garage_price"]').val(data_.garage_price)
+					}
+					$('.user_list_content').html(shtml);
+				}else{
+					shtml +='暂无';
+					$('.user_list_content').html(shtml);
+				}
+			},'json')
+    });
+})
